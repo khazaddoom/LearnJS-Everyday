@@ -120,6 +120,14 @@
 // }
 
 
-let a = window.prompt();
+// let a = window.prompt();
 
-console.log('You pressed : ' + a)
+// console.log('You pressed : ' + a)
+
+function sayHello(name) {
+  alert("hello Mr. " + name + ' ' + this);
+
+}
+
+
+sayHello(window.prompt('Enter your name please'));
