@@ -1,0 +1,6 @@
+POST https://ws.dev.aramex.net/crowdsourcingapiv1/api/v1/openjob/getall
+Content-Type: application/json; charset=utf-8
+
+{
+	"StatusId": 0
+}
