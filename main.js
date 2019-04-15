@@ -120,4 +120,6 @@
 // }
 
 
-  
+let a = window.prompt();
+
+console.log('You pressed : ' + a)
