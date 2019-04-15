@@ -1,0 +1,123 @@
+// var john = {
+//     name: 'John',
+//     yearOfBirth: 1986,
+//     job: 'Developer'
+// }
+
+// let Person = function (name, yearOfBirth, job)  {
+
+//     this.name = name;
+//     this.yearOfBirth = yearOfBirth;
+//     this.job = job
+
+
+// };
+
+
+
+// var Ganesh = new Person('Ganesh', 1986, 'Solution Architect');
+
+// Person.prototype.lastName = "Acharya";
+
+// Person.prototype.setLastName = function (name, yearOfBirth, job, lastName)  {
+
+//     this.name = name;
+//     this.yearOfBirth = yearOfBirth;
+//     this.job = job;
+//     this.lastName = lastName
+
+
+// };
+
+
+// var Reshma = new Person('Reshma', 1989, 'Banker', 'Kumari');
+
+// Reshma.setLastName('Reshma', 1989, 'Banker', 'Kumari');
+
+
+  // code goes here  
+
+//   function fact(num) {
+  
+//   let factorial = 1;
+  
+//   for(let i=num; i > 1; i--) {
+      
+//       factorial = factorial * i;
+      
+//   }
+  
+//   return factorial; 
+
+// }
+
+// console.log(fact(3))
+         
+// let yearsOfBirth = [1982, 1986, 1989, 2006];
+// let fullAges = [];
+
+// function isFullAge(yearOfBirth) {
+
+//   return (2019-yearOfBirth) > 18
+
+// }
+
+// for(let i=0; i<yearsOfBirth.length; i++) {
+
+//   fullAges[i] = isFullAge(yearsOfBirth[i]);
+
+//   if (fullAges[i] >= 18)
+//     console.log('Person with DOB: ' + yearsOfBirth[i] + ' is now ' + (2019 - yearsOfBirth[i]) + ' years old, and is of Full Age');
+//   else
+//     console.log('Person with DOB: ' + yearsOfBirth[i] + ' is now ' + (2019 - yearsOfBirth[i]) + ' years old, and is not of Full Age yet!')
+  
+// }
+
+// console.log(yearsOfBirth);
+// console.log(fullAges);
+
+// function FirstFactorial(num) { 
+
+  
+//   if (num > 1)
+//     return num * FirstFactorial(num - 1)
+//   else
+//     return 1
+         
+// }
+   
+// // keep this function call here 
+// console.log(FirstFactorial(6));   
+
+// let a = 100;
+
+// first();
+
+// function first() {
+
+//   let b = 50;
+
+//   console.log( a + b);
+
+//   second();
+
+//   function second() {
+
+//     let c = 25;
+
+//     console.log( a + b + c );
+
+//     third();
+//   }
+
+//   function third() {
+
+//     let d = 12.5;
+//     console.log( a + b  + c + d);
+
+//   }
+
+// }
+
+
+  
