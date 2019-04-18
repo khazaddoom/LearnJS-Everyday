@@ -128,6 +128,4 @@ function sayHello(name) {
   alert("hello Mr. " + name + ' ' + this);
 
 }
-
-
 sayHello(window.prompt('Enter your name please'));
