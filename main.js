@@ -124,8 +124,30 @@
 
 // console.log('You pressed : ' + a)
 
-function sayHello(name) {
-  alert("hello Mr. " + name + ' ' + this);
+// function sayHello(name) {
+//   alert("hello Mr. " + name + ' ' + this);
 
+// }
+// sayHello(window.prompt('Enter your name please'));
+
+var Person = function(name, yearOfBirth, job) {
+
+  this.name = name;
+  this.yearOfBirth = yearOfBirth;
+  this.job = job;
+  // this.calculateAge = function() {
+  //   return 2019 - this.yearOfBirth;
+  // }
+
+};
+
+
+
+var Ganesh = new Person('Ganesh', 1986, 'Developer');
+
+Person.prototype.calculateAge = function() {
+  return (2018 - this.yearOfBirth);
 }
-sayHello(window.prompt('Enter your name please'));
+
+
+console.log(Ganesh.calculateAge())
