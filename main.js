@@ -154,9 +154,16 @@
 
 //Prototype Chain in browser console
 
-var Person = function(name, age) {
-  this.name = name;
-  this.age = age;
-}
+// var Person = function(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-var john = new Person('John', 33);
+// var john = new Person('John', 33);
+
+//Primitives v/s Objects
+
+
+var a = 10;
+var b = a;
+
