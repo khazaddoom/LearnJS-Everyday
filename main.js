@@ -167,15 +167,26 @@
 // var a = 10;
 // var b = a;
 
-var obj1 = {
-  name: 'Ganesh',
-  age: 33
+// var obj1 = {
+//   name: 'Ganesh',
+//   age: 33
+// };
+
+// var obj2 = obj1;
+
+// obj2.age = 34;
+
+var a = 100;
+
+var obj = {
+  name: 'JavaScript'
 };
 
-var obj2 = obj1;
+function simple(first, second) {
+first = 200;
+  second.name = 'Java';
+}
 
-obj2.age = 34;
 
-
-
+simple(a, obj);
 
