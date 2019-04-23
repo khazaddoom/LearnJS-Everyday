@@ -130,24 +130,33 @@
 // }
 // sayHello(window.prompt('Enter your name please'));
 
-var Person = function(name, yearOfBirth, job) {
+// var Person = function(name, yearOfBirth, job) {
 
+//   this.name = name;
+//   this.yearOfBirth = yearOfBirth;
+//   this.job = job;
+//   // this.calculateAge = function() {
+//   //   return 2019 - this.yearOfBirth;
+//   // }
+
+// };
+
+
+
+// var Ganesh = new Person('Ganesh', 1986, 'Developer');
+
+// Person.prototype.calculateAge = function() {
+//   return (2018 - this.yearOfBirth);
+// }
+
+
+// console.log(Ganesh.calculateAge())
+
+//Prototype Chain in browser console
+
+var Person = function(name, age) {
   this.name = name;
-  this.yearOfBirth = yearOfBirth;
-  this.job = job;
-  // this.calculateAge = function() {
-  //   return 2019 - this.yearOfBirth;
-  // }
-
-};
-
-
-
-var Ganesh = new Person('Ganesh', 1986, 'Developer');
-
-Person.prototype.calculateAge = function() {
-  return (2018 - this.yearOfBirth);
+  this.age = age;
 }
 
-
-console.log(Ganesh.calculateAge())
+var john = new Person('John', 33);
