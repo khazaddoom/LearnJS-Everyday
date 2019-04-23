@@ -164,6 +164,18 @@
 //Primitives v/s Objects
 
 
-var a = 10;
-var b = a;
+// var a = 10;
+// var b = a;
+
+var obj1 = {
+  name: 'Ganesh',
+  age: 33
+};
+
+var obj2 = obj1;
+
+obj2.age = 34;
+
+
+
 
