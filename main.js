@@ -190,19 +190,43 @@
 
 // simple(a, obj);
 
-var val2 = test(function() {
-  return 'Hello';
-})
+// var val2 = test(function() {
+//   return 'Hello';
+// })
 
-val2();
+// val2();
 
 
-function test(a) {
+// function test(a) {
 
-  var val1 = a();
+//   var val1 = a();
 
-  return function() {
-    console.log(val1);
+//   return function() {
+//     console.log(val1);
+//   }
+
+// }
+
+//Functions as argument and return type
+
+var years = [1986, 1989, 1991, 2007];
+
+console.log(arrayCalc(years, calculateAge));
+
+function arrayCalc(years, fn) {
+
+  var arrRes = [];
+
+  for (let index = 0; index < years.length; index++) {
+    
+    arrRes.push(fn(years[index]));
+
   }
 
+  return arrRes;
+
+}
+
+function calculateAge(yearOfBirth) {
+  return 2019 - yearOfBirth;
 }
