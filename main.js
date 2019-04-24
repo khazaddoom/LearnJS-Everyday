@@ -176,17 +176,19 @@
 
 // obj2.age = 34;
 
-var a = 100;
+// var a = 100;
 
-var obj = {
-  name: 'JavaScript'
-};
+// var obj = {
+//   name: 'JavaScript'
+// };
 
-function simple(first, second) {
-first = 200;
-  second.name = 'Java';
-}
+// function simple(first, second) {
+// first = 200;
+//   second.name = 'Java';
+// }
 
 
-simple(a, obj);
+// simple(a, obj);
+
+
 
