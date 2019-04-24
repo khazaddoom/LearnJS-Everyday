@@ -190,5 +190,19 @@
 
 // simple(a, obj);
 
+var val2 = test(function() {
+  return 'Hello';
+})
+
+val2();
 
 
+function test(a) {
+
+  var val1 = a();
+
+  return function() {
+    console.log(val1);
+  }
+
+}
