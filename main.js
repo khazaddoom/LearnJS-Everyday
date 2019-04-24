@@ -210,10 +210,15 @@
 //Functions as argument and return type
 
 var years = [1986, 1989, 1991, 2007];
-
-console.log(arrayCalc(years, calculateAge));
+var ages = arrayCalc(years, calculateAge);
+console.log(ages);
 
 console.log(arrayCalc(years, isOfFullAge))
+
+var heartRates = arrayCalc(ages, maxHeartRate);
+
+console.log(heartRates)
+
 
 function arrayCalc(years, fn) {
 
@@ -236,4 +241,10 @@ function calculateAge(yearOfBirth) {
 function isOfFullAge(yearOfBirth) {
   if (calculateAge(yearOfBirth) >= 18) return true
   else  return false;
+}
+//Max Heartrate based on Age!
+function maxHeartRate(age) {
+
+  if (age >= 18 && age <= 81) return Math.round(206.9 - (0.67 * age));
+  else return -1;
 }
