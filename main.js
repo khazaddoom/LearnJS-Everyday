@@ -213,6 +213,8 @@ var years = [1986, 1989, 1991, 2007];
 
 console.log(arrayCalc(years, calculateAge));
 
+console.log(arrayCalc(years, isOfFullAge))
+
 function arrayCalc(years, fn) {
 
   var arrRes = [];
@@ -229,4 +231,9 @@ function arrayCalc(years, fn) {
 
 function calculateAge(yearOfBirth) {
   return 2019 - yearOfBirth;
+}
+
+function isOfFullAge(yearOfBirth) {
+  if (calculateAge(yearOfBirth) >= 18) return true
+  else  return false;
 }
