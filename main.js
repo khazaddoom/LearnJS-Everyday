@@ -248,3 +248,4 @@ function maxHeartRate(age) {
   if (age >= 18 && age <= 81) return Math.round(206.9 - (0.67 * age));
   else return -1;
 }
+
