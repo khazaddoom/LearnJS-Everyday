@@ -209,43 +209,66 @@
 
 //Functions as argument and return type
 
-var years = [1986, 1989, 1991, 2007];
-var ages = arrayCalc(years, calculateAge);
-console.log(ages);
+// var years = [1986, 1989, 1991, 2007];
+// var ages = arrayCalc(years, calculateAge);
+// console.log(ages);
 
-console.log(arrayCalc(years, isOfFullAge))
+// console.log(arrayCalc(years, isOfFullAge))
 
-var heartRates = arrayCalc(ages, maxHeartRate);
+// var heartRates = arrayCalc(ages, maxHeartRate);
 
-console.log(heartRates)
+// console.log(heartRates)
 
 
-function arrayCalc(years, fn) {
+// function arrayCalc(years, fn) {
 
-  var arrRes = [];
+//   var arrRes = [];
 
-  for (let index = 0; index < years.length; index++) {
+//   for (let index = 0; index < years.length; index++) {
     
-    arrRes.push(fn(years[index]));
+//     arrRes.push(fn(years[index]));
 
+//   }
+
+//   return arrRes;
+
+// }
+
+// function calculateAge(yearOfBirth) {
+//   return 2019 - yearOfBirth;
+// }
+
+// function isOfFullAge(yearOfBirth) {
+//   if (calculateAge(yearOfBirth) >= 18) return true
+//   else  return false;
+// }
+// //Max Heartrate based on Age!
+// function maxHeartRate(age) {
+
+//   if (age >= 18 && age <= 81) return Math.round(206.9 - (0.67 * age));
+//   else return -1;
+// }
+
+//Functions returning functions
+
+
+function interviewquestion(job) {
+  if (job === 'designer') {
+
+    return function(name) {
+      console.log('Hey ' + name + ', can you please explain what UX design means?')
+    }
+
+    
+  } else if (job === 'developer' ){
+
+    return function(name) {
+      console.log('Hey ' + name + ', can you please list out few features of JavaScript?')
+    }
+    
   }
-
-  return arrRes;
-
 }
 
-function calculateAge(yearOfBirth) {
-  return 2019 - yearOfBirth;
-}
 
-function isOfFullAge(yearOfBirth) {
-  if (calculateAge(yearOfBirth) >= 18) return true
-  else  return false;
-}
-//Max Heartrate based on Age!
-function maxHeartRate(age) {
 
-  if (age >= 18 && age <= 81) return Math.round(206.9 - (0.67 * age));
-  else return -1;
-}
 
