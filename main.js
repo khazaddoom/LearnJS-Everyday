@@ -269,6 +269,8 @@ function interviewquestion(job) {
   }
 }
 
+var developerQuestion = interviewquestion('developer');
 
+developerQuestion('Ganesh')
 
 
