@@ -249,28 +249,28 @@
 //   else return -1;
 // }
 
-//Functions returning functions
+// //Functions returning functions
 
 
-function interviewquestion(job) {
-  if (job === 'designer') {
+// function interviewquestion(job) {
+//   if (job === 'designer') {
 
-    return function(name) {
-      console.log('Hey ' + name + ', can you please explain what UX design means?')
-    }
+//     return function(name) {
+//       console.log('Hey ' + name + ', can you please explain what UX design means?')
+//     }
 
     
-  } else if (job === 'developer' ){
+//   } else if (job === 'developer' ){
 
-    return function(name) {
-      console.log('Hey ' + name + ', can you please list out few features of JavaScript?')
-    }
+//     return function(name) {
+//       console.log('Hey ' + name + ', can you please list out few features of JavaScript?')
+//     }
     
-  }
-}
+//   }
+// }
 
-var developerQuestion = interviewquestion('developer');
+// var developerQuestion = interviewquestion('developer');
 
-developerQuestion('Ganesh')
+// developerQuestion('Ganesh')
 
 
