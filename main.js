@@ -288,5 +288,48 @@
 //   console.log(score >= 5 - goodLuck)
 // })(5);
 
+//CLossures
 
+// function interviewquestion(job) {
+//     if (job === 'designer') {
+  
+//       return function(name) {
+//         console.log('Hey ' + name + ', can you please explain what UX design means?')
+//       }
+  
+      
+//     } else if (job === 'developer' ){
+  
+//       return function(name) {
+//         console.log('Hey ' + name + ', can you please list out few features of JavaScript?')
+//       }
+      
+//     }
+//   }
+  
+//   var developerQuestion = interviewquestion('developer');
+  
+//   developerQuestion('Ganesh')
+
+  function interviewQuestion(job) {
+
+
+    return function(name) {
+      if (job === 'developer') {
+
+        console.log('Hello ' + name + ', can you explain who is web developer?');
+        
+      } else if (job === 'teacher') {
+
+        console.log('Hello ' + name + ', what all subjects do you teach?');
+        
+      } 
+    }
+
+
+  }
+
+
+
+  interviewQuestion('teacher')('Reshma');
 
