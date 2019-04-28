@@ -311,6 +311,8 @@
   
 //   developerQuestion('Ganesh')
 
+//CLossures
+
   function interviewQuestion(job) {
 
 
