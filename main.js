@@ -311,25 +311,36 @@
   
 //   developerQuestion('Ganesh')
 
-  function interviewQuestion(job) {
+  // function interviewQuestion(job) {
 
 
-    return function(name) {
-      if (job === 'developer') {
+  //   return function(name) {
+  //     if (job === 'developer') {
 
-        console.log('Hello ' + name + ', can you explain who is web developer?');
+  //       console.log('Hello ' + name + ', can you explain who is web developer?');
         
-      } else if (job === 'teacher') {
+  //     } else if (job === 'teacher') {
 
-        console.log('Hello ' + name + ', what all subjects do you teach?');
+  //       console.log('Hello ' + name + ', what all subjects do you teach?');
         
-      } 
-    }
+  //     } 
+  //   }
 
 
-  }
+  // }
 
 
 
-  interviewQuestion('teacher')('Reshma');
+  // interviewQuestion('teacher')('Reshma');
+
+//Deleting Object properties
+
+var car = {
+  model: 'WagonR',
+  make: 'Maruti Suzuki',
+  yearOfMake: '2016'
+};
+
+
+console.log(car);
 
