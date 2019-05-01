@@ -341,7 +341,7 @@
     name: 'John',
     age: 26,
     job: 'teacher',
-    prensentation: function(style, timeOfDay) {
+    presentation: function(style, timeOfDay) {
       if (style === 'formal') {
 
         console.log('Good ' + timeOfDay + ' ladies and gentlemen, I\'m a ' + this.name + ',  I\'m ' + this.age + ' years old and I\'m a ' + this.job)
@@ -355,7 +355,7 @@
   }
 
 
-  //john.prensentation('formal', 'morning');
+  //john.presentation('formal', 'morning');
 
   var Ganesh = {
     name: 'Ganesh',
@@ -364,6 +364,10 @@
   };
 
 
-  //john.prensentation.call(Ganesh, 'formal', 'afternoon');
+  //john.presentation.call(Ganesh, 'formal', 'afternoon');
 
-  john.prensentation.apply(Ganesh, ['friendly', 'morning']);
+  //john.presentation.apply(Ganesh, ['friendly', 'morning']);
+
+var GaneshFormal = john.presentation.bind(Ganesh, 'formal');
+
+GaneshFormal('day')
