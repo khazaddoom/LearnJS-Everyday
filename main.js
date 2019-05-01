@@ -414,10 +414,18 @@ function random() {
   
   var rand = Math.round(Math.random() * 3);
 
-  console.log(rand);
+  if (rand === 1) {
+
+    return q1;
+    
+  } else if (rand === 1) {
+    
+    return q2;
+  } else
+    return q3;
 
 
 }
 
-random();
+console.log(random());
 
