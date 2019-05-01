@@ -348,14 +348,14 @@
         
       } else if (style === 'friendly'){
 
-        console.log('Hey whats up? I\'m a ' + this.job + ', I\'m ' + this.age + ' years old. Have a nice ' + this.timeOfDay)
+        console.log('Hey whats up? I\'m a ' + this.job + ', I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay)
         
       }
     }
   }
 
 
-  john.prensentation('formal', 'morning');
+  //john.prensentation('formal', 'morning');
 
   var Ganesh = {
     name: 'Ganesh',
@@ -364,4 +364,6 @@
   };
 
 
-  john.prensentation.call(Ganesh, 'formal', 'afternoon');
+  //john.prensentation.call(Ganesh, 'formal', 'afternoon');
+
+  john.prensentation.apply(Ganesh, ['friendly', 'morning']);
