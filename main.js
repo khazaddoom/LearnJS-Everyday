@@ -363,6 +363,5 @@
     job: 'Developer'
   };
 
-Ganesh.prensentation = john.prensentation;
 
-Ganesh.prensentation('formal', 'morning');
+  john.prensentation.call(Ganesh, 'formal', 'afternoon');
