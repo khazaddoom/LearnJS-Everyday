@@ -404,6 +404,13 @@ var Question = function(questionString, answers, correctAnswerIndex) {
   this.questionString = questionString;
   this.answers = answers;
   this.correctAnswerIndex = correctAnswerIndex;
+  this.display = function() {
+    return this.questionString + '\n' + this.answers;
+  }
+  this.isCorrectAnswer = function(answerIndex) {
+    if (answerIndex == correctAnswerIndex)  return 'Correct!';
+    else  return 'InCorrect!'
+  }
 }
 
 var q1 = new Question('How many planets are there in our Solar System?', ['0. One', '1. Seven', '2. Nine'], 2);
@@ -418,7 +425,7 @@ function random() {
 
     return q1;
     
-  } else if (rand === 1) {
+  } else if (rand === 2) {
     
     return q2;
   } else
@@ -426,6 +433,10 @@ function random() {
 
 
 }
+var currentQuestion;
+currentQuestion = random();
+console.log(currentQuestion.display());
+var answer = prompt();
 
-console.log(random());
+console.log(currentQuestion.isCorrectAnswer(answer));
 
