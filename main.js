@@ -344,7 +344,7 @@
     prensentation: function(style, timeOfDay) {
       if (style === 'formal') {
 
-        console.log('Good ' + timeOfDay + ' ladies and gentlement, I\'m a ' + this.name + ',  I\'m ' + this.age + ' years old and I\'m a ' + this.job)
+        console.log('Good ' + timeOfDay + ' ladies and gentlemen, I\'m a ' + this.name + ',  I\'m ' + this.age + ' years old and I\'m a ' + this.job)
         
       } else if (style === 'friendly'){
 
