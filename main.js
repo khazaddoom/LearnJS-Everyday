@@ -337,37 +337,65 @@
   // interviewQuestion('teacher')('Reshma');
 
 
-  var john = {
-    name: 'John',
-    age: 26,
-    job: 'teacher',
-    presentation: function(style, timeOfDay) {
-      if (style === 'formal') {
+//   var john = {
+//     name: 'John',
+//     age: 26,
+//     job: 'teacher',
+//     presentation: function(style, timeOfDay) {
+//       if (style === 'formal') {
 
-        console.log('Good ' + timeOfDay + ' ladies and gentlemen, I\'m a ' + this.name + ',  I\'m ' + this.age + ' years old and I\'m a ' + this.job)
+//         console.log('Good ' + timeOfDay + ' ladies and gentlemen, I\'m a ' + this.name + ',  I\'m ' + this.age + ' years old and I\'m a ' + this.job)
         
-      } else if (style === 'friendly'){
+//       } else if (style === 'friendly'){
 
-        console.log('Hey whats up? I\'m a ' + this.job + ', I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay)
+//         console.log('Hey whats up? I\'m a ' + this.job + ', I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay)
         
-      }
-    }
+//       }
+//     }
+//   }
+
+
+//   //john.presentation('formal', 'morning');
+
+//   var Ganesh = {
+//     name: 'Ganesh',
+//     age: 33,
+//     job: 'Developer'
+//   };
+
+
+//   //john.presentation.call(Ganesh, 'formal', 'afternoon');
+
+//   //john.presentation.apply(Ganesh, ['friendly', 'morning']);
+
+// var GaneshFormal = john.presentation.bind(Ganesh, 'formal');
+
+// GaneshFormal('day')
+
+var years = [1956, 1986, 1989, 2000, 1982];
+
+function arrayCalc(arr, fn) {
+
+  var res = [];
+
+  for (let index = 0; index < arr.length; index++) {
+    res.push(fn(arr[index]));
+    
   }
+  return res;
+}
 
 
-  //john.presentation('formal', 'morning');
+function calculateAge(yearOfBirth) {
+  return 2019 - yearOfBirth;
+}
 
-  var Ganesh = {
-    name: 'Ganesh',
-    age: 33,
-    job: 'Developer'
-  };
+function isFullAge(fullAgeLimit, age) {
+  return age >= fullAgeLimit;
+}
 
+var ages = arrayCalc(years, calculateAge);
 
-  //john.presentation.call(Ganesh, 'formal', 'afternoon');
+console.log(ages);
 
-  //john.presentation.apply(Ganesh, ['friendly', 'morning']);
-
-var GaneshFormal = john.presentation.bind(Ganesh, 'formal');
-
-GaneshFormal('day')
+console.log(arrayCalc(ages, isFullAge.bind(this, 20)))
