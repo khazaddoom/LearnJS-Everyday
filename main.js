@@ -372,30 +372,52 @@
 
 // GaneshFormal('day')
 
-var years = [1956, 1986, 1989, 2000, 1982];
+// var years = [1956, 1986, 1989, 2000, 1982];
 
-function arrayCalc(arr, fn) {
+// function arrayCalc(arr, fn) {
 
-  var res = [];
+//   var res = [];
 
-  for (let index = 0; index < arr.length; index++) {
-    res.push(fn(arr[index]));
+//   for (let index = 0; index < arr.length; index++) {
+//     res.push(fn(arr[index]));
     
-  }
-  return res;
+//   }
+//   return res;
+// }
+
+
+// function calculateAge(yearOfBirth) {
+//   return 2019 - yearOfBirth;
+// }
+
+// function isFullAge(fullAgeLimit, age) {
+//   return age >= fullAgeLimit;
+// }
+
+// var ages = arrayCalc(years, calculateAge);
+
+// console.log(ages);
+
+// console.log(arrayCalc(ages, isFullAge.bind(this, 20)))
+
+var Question = function(questionString, answers, correctAnswerIndex) {
+  this.questionString = questionString;
+  this.answers = answers;
+  this.correctAnswerIndex = correctAnswerIndex;
 }
 
+var q1 = new Question('How many planets are there in our Solar System?', ['0. One', '1. Seven', '2. Nine'], 2);
+var q2 = new Question('What is the name of our Planet?', ['0. Earth', '1. Moon', '2. Pluto'], 0);
+var q3 = new Question('How many moons does earth have?', ['0. One', '1. Seven', '2. Nine'], 0);
 
-function calculateAge(yearOfBirth) {
-  return 2019 - yearOfBirth;
+function random() {
+  
+  var rand = Math.round(Math.random() * 3);
+
+  console.log(rand);
+
+
 }
 
-function isFullAge(fullAgeLimit, age) {
-  return age >= fullAgeLimit;
-}
+random();
 
-var ages = arrayCalc(years, calculateAge);
-
-console.log(ages);
-
-console.log(arrayCalc(ages, isFullAge.bind(this, 20)))
