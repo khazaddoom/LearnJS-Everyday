@@ -336,3 +336,33 @@
 
   // interviewQuestion('teacher')('Reshma');
 
+
+  var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    prensentation: function(style, timeOfDay) {
+      if (style === 'formal') {
+
+        console.log('Good ' + timeOfDay + ' ladies and gentlement, I\'m a ' + this.name + ',  I\'m ' + this.age + ' years old and I\'m a ' + this.job)
+        
+      } else if (style === 'friendly'){
+
+        console.log('Hey whats up? I\'m a ' + this.job + ', I\'m ' + this.age + ' years old. Have a nice ' + this.timeOfDay)
+        
+      }
+    }
+  }
+
+
+  john.prensentation('formal', 'morning');
+
+  var Ganesh = {
+    name: 'Ganesh',
+    age: 33,
+    job: 'Developer'
+  };
+
+Ganesh.prensentation = john.prensentation;
+
+Ganesh.prensentation('formal', 'morning');
