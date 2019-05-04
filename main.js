@@ -400,7 +400,8 @@
 
 // console.log(arrayCalc(ages, isFullAge.bind(this, 20)))
 
-var Question = function(questionString, answers, correctAnswerIndex) {
+ (function () {
+  var Question = function(questionString, answers, correctAnswerIndex) {
   this.questionString = questionString;
   this.answers = answers;
   this.correctAnswerIndex = correctAnswerIndex;
@@ -421,7 +422,7 @@ var q3 = new Question('How many moons does earth have?', ['0. One', '1. Seven', 
 
 function random() {
   
-  var rand = Math.round(Math.random() * 3);
+  var rand = Math.floor(Math.random() * 3);
 
   if (rand === 1) {
 
@@ -440,5 +441,5 @@ currentQuestion = random();
 console.log(currentQuestion.display());
 var answer = prompt();
 
-console.log(currentQuestion.isCorrectAnswer(answer));
+console.log(currentQuestion.isCorrectAnswer(answer)); })();
 
