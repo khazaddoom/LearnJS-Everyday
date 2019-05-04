@@ -404,13 +404,15 @@ var Question = function(questionString, answers, correctAnswerIndex) {
   this.questionString = questionString;
   this.answers = answers;
   this.correctAnswerIndex = correctAnswerIndex;
-  this.display = function() {
-    return this.questionString + '\n' + this.answers;
-  }
-  this.isCorrectAnswer = function(answerIndex) {
-    if (answerIndex == correctAnswerIndex)  return 'Correct!';
-    else  return 'InCorrect!'
-  }
+  
+};
+
+Question.prototype.display = function() {
+  return this.questionString + '\n' + this.answers;
+}
+Question.prototype.isCorrectAnswer = function(answerIndex) {
+  if (answerIndex == this.correctAnswerIndex)  return 'Correct!';
+  else  return 'InCorrect!'
 }
 
 var q1 = new Question('How many planets are there in our Solar System?', ['0. One', '1. Seven', '2. Nine'], 2);
