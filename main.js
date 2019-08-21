@@ -335,12 +335,21 @@
 
 //Deleting Object properties
 
-var car = {
-  model: 'WagonR',
-  make: 'Maruti Suzuki',
-  yearOfMake: '2016'
-};
+// var car = {
+//   model: 'WagonR',
+//   make: 'Maruti Suzuki',
+//   yearOfMake: '2016'
+// };
 
 
-console.log(car);
+// console.log(car);
 
+const p = new Promise((resolve, reject) => {
+  resolve('Have something for you')
+});
+
+
+p.then((res) => {
+  console.log(this)
+  console.log(res);
+});
