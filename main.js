@@ -455,11 +455,14 @@
 // console.log(car);
 
 const p = new Promise((resolve, reject) => {
-  resolve('Have something for you')
+  reject('NullPointerException')
 });
 
 
 p.then((res) => {
   console.log(this)
   console.log(res);
+},
+(err) => {
+  console.log("Something went wrong: ", err);
 });
