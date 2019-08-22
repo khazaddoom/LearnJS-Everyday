@@ -454,17 +454,24 @@
 
 // console.log(car);
 
-const p = new Promise((resolve, reject) => {
-  reject('NullPointerException')
-});
+// const p = new Promise((resolve, reject) => {
+//   resolve('NullPointerException')
+// });
 
 
-p.then((res) => {
-  console.log(this)
-  console.log(res);
-  return 100;
-},
-(err) => {
-  console.log("Something went wrong: ", err);
-  return -1;
-}).then( val => console.log(val))
+// p.then((res) => {
+//   console.log(res);
+// },
+// (err) => {
+//   console.log("Something went wrong: ", err);
+// });
+
+function calculateSquare(value) {
+  return new Promise((resolve, reject)=> {
+    if (typeof value === 'number') resolve(value * value);
+    reject('BadInputException: Invalid input type');
+  });
+}
+
+
+calculateSquare('ssfsdf').then( value => console.log(value)).catch(err => console.log(err))
