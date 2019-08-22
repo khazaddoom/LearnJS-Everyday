@@ -462,7 +462,9 @@ const p = new Promise((resolve, reject) => {
 p.then((res) => {
   console.log(this)
   console.log(res);
+  return 100;
 },
 (err) => {
   console.log("Something went wrong: ", err);
-});
+  return -1;
+}).then( val => console.log(val))
