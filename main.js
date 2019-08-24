@@ -466,12 +466,27 @@
 //   console.log("Something went wrong: ", err);
 // });
 
-function calculateSquare(value) {
-  return new Promise((resolve, reject)=> {
-    if (typeof value === 'number') resolve(value * value);
-    reject('BadInputException: Invalid input type');
-  });
+// function calculateSquare(value) {
+//   return new Promise((resolve, reject)=> {
+//     if (typeof value === 'number') resolve(value * value);
+//     reject('BadInputException: Invalid input type');
+//   });
+// }
+
+
+// calculateSquare('ssfsdf').then(function (value) {  console.log(value)}, function(err) {console.log(err)})
+
+
+function printy(value) {
+  return new Promise((resolve, reject) => {
+    resolve(value)
+  })
 }
 
-
-calculateSquare('ssfsdf').then(function (value) {  console.log(value)}, function(err) {console.log(err)})
+printy('*').then(value => {
+                  console.log(value);
+                  return printy(value)
+            }).then(value => {
+              console.log(value);
+              return printy
+            })
