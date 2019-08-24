@@ -474,4 +474,4 @@ function calculateSquare(value) {
 }
 
 
-calculateSquare('ssfsdf').then(value => console.log(value), err => console.log(err))
+calculateSquare('ssfsdf').then(function (value) {  console.log(value)}, function(err) {console.log(err)})
