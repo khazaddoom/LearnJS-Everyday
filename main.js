@@ -477,16 +477,20 @@
 // calculateSquare('ssfsdf').then(function (value) {  console.log(value)}, function(err) {console.log(err)})
 
 
-function printy(value) {
-  return new Promise((resolve, reject) => {
-    resolve(value)
-  })
-}
+// function printy(value) {
+//   return new Promise((resolve, reject) => {
+//     resolve(value)
+//   })
+// }
 
-printy('*').then(value => {
-                  console.log(value);
-                  return printy(value)
-            }).then(value => {
-              console.log(value);
-              return printy
-            })
+// printy('*').then(value => {
+//                   console.log(value);
+//                   return printy(value)
+//             }).then(value => {
+//               console.log(value);
+//               return printy
+//             })
+
+let keys = ["goals", "assists", "penalty_goals", "appearances", "yellow_cards", "second_yellow_cards", "red_cards", "substitute_in", "substitute_out", "subs_on_bench", "minutes_played", "shirt_number", "shots_per_game", "aerials_won"];
+
+console.log(keys.sort());
