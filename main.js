@@ -491,6 +491,14 @@
 //               return printy
 //             })
 
-let keys = ["goals", "assists", "penalty_goals", "appearances", "yellow_cards", "second_yellow_cards", "red_cards", "substitute_in", "substitute_out", "subs_on_bench", "minutes_played", "shirt_number", "shots_per_game", "aerials_won"];
+// let keys = ["goals", "assists", "penalty_goals", "appearances", "yellow_cards", "second_yellow_cards", "red_cards", "substitute_in", "substitute_out", "subs_on_bench", "minutes_played", "shirt_number", "shots_per_game", "aerials_won"];
 
-console.log(keys.sort());
+// console.log(keys.sort());
+
+let { name, age} = {
+    name: 'Ganesh',
+    age: 25,
+    address: "Mangalore"
+};
+
+console.log(`My name is ${name}`)
