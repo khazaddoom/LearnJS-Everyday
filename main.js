@@ -495,10 +495,31 @@
 
 // console.log(keys.sort());
 
-let { name, age} = {
-    name: 'Ganesh',
-    age: 25,
-    address: "Mangalore"
-};
+// let { name, age} = {
+//     name: 'Ganesh',
+//     age: 25,
+//     address: "Mangalore"
+// };
 
-console.log(`My name is ${name}`)
+// console.log(`My name is ${name}`)
+
+let http = require('http');
+
+http.get('http://reqres.in/api/users?page=2', (err, res, body) => {
+  console.log(err)
+})
+
+// function getEmployees() {
+//   // return new Promise((resolve, reject) => {
+//   //   http.get('http://dummy.restapiexample.com/api/v1/employees', (res) => {
+//   //     resolve(res)
+//   //   })
+    
+//   // })
+//   http.get('http://dummy.restapiexample.com/api/v1/employees', (res) => {
+//       console.log(res)
+//   });
+// }
+
+
+// getEmployees()
