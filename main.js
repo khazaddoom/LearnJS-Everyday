@@ -503,11 +503,11 @@
 
 // console.log(`My name is ${name}`)
 
-let http = require('http');
+// let http = require('http');
 
-http.get('http://reqres.in/api/users?page=2', (err, res, body) => {
-  console.log(err)
-})
+// http.get('http://reqres.in/api/users?page=2', (err, res, body) => {
+//   console.log(err)
+// })
 
 // function getEmployees() {
 //   // return new Promise((resolve, reject) => {
@@ -523,3 +523,18 @@ http.get('http://reqres.in/api/users?page=2', (err, res, body) => {
 
 
 // getEmployees()
+
+var http = require('http');
+   http.get('http://eternagame.wikia.com/wiki/EteRNA_Dictionary', function(res){
+        var str = '';
+        console.log('Response is '+res.statusCode);
+
+        res.on('data', function (chunk) {
+               str += chunk;
+         });
+
+        res.on('end', function () {
+             console.log(str);
+        });
+
+  });
