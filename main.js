@@ -524,17 +524,35 @@
 
 // getEmployees()
 
-var http = require('http');
-   http.get('http://eternagame.wikia.com/wiki/EteRNA_Dictionary', function(res){
-        var str = '';
-        console.log('Response is '+res.statusCode);
+// var http = require('http');
+//    http.get('http://eternagame.wikia.com/wiki/EteRNA_Dictionary', function(res){
+//         var str = '';
+//         console.log('Response is '+res.statusCode);
 
-        res.on('data', function (chunk) {
-               str += chunk;
-         });
+//         res.on('data', function (chunk) {
+//                str += chunk;
+//          });
 
-        res.on('end', function () {
-             console.log(str);
-        });
+//         res.on('end', function () {
+//              console.log(str);
+//         });
 
-  });
+//   });
+
+const timerName = 'Array Map'
+
+const initialArray = (
+  Array(10000000)
+  .fill(null)
+)
+
+console.time(timerName)
+
+// initialArray.map(String)
+const newArray = []
+
+for (let i = 0, l = initialArray.length; i < l; i++) {
+  newArray[i] = String(initialArray[i])
+}
+
+console.timeEnd(timerName)
