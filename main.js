@@ -503,10 +503,47 @@
 
 // console.log(`My name is ${name}`)
 
-// let http = require('http');
+let http = require('http');
+
+// console.log(http.get);
+
+// var options = {
+//   host: 'https://reqres.in',
+//   path: '/api/users?page=2'
+// };
+
+// http.get(options, function(resp){
+//   resp.on('data', function(chunk){
+//     console.log('something!!!')
+//   });
+// }).on("error", function(e){
+//   console.log("Got error: " + e.message);
+// });
+
+// var options = {
+//   host: 'http://reqres.in',
+//   port: 443,
+//   path: '/api/users?page=2',
+//   method: 'GET'
+// };
+
+// var req = http.request(options, function(res) {
+//   console.log('STATUS: ' + res.statusCode);
+//   console.log('HEADERS: ' + JSON.stringify(res.headers));
+//   res.setEncoding('utf8');
+//   res.on('data', function (chunk) {
+//     console.log('BODY: ' + chunk);
+//   });
+// });
+
+// // write data to request body
+// req.write('data\n');
+// req.write('data\n');
+// req.end();
+
 
 // http.get('http://reqres.in/api/users?page=2', (err, res, body) => {
-//   console.log(err)
+//   console.log(res)
 // })
 
 // function getEmployees() {
@@ -539,20 +576,42 @@
 
 //   });
 
-const timerName = 'Array Map'
+// const timerName = 'Array Map'
 
-const initialArray = (
-  Array(10000000)
-  .fill(null)
-)
+// const initialArray = (
+//   Array(10000000)
+//   .fill(null)
+// )
 
-console.time(timerName)
+// console.time(timerName)
 
-// initialArray.map(String)
-const newArray = []
+// // initialArray.map(String)
+// const newArray = []
 
-for (let i = 0, l = initialArray.length; i < l; i++) {
-  newArray[i] = String(initialArray[i])
+// for (let i = 0, l = initialArray.length; i < l; i++) {
+//   newArray[i] = String(initialArray[i])
+// }
+
+// console.timeEnd(timerName)
+
+const https = require('https')
+const options = {
+  hostname: 'flaviocopes.com',
+  port: 443,
+  path: '/todos',
+  method: 'GET'
 }
 
-console.timeEnd(timerName)
+const req = https.request(options, (res) => {
+  console.log(`statusCode: ${res.statusCode}`)
+
+  res.on('data', (d) => {
+    process.stdout.write(d)
+  })
+})
+
+req.on('error', (error) => {
+  console.error(error)
+})
+
+req.end()
