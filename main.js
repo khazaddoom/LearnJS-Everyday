@@ -594,24 +594,45 @@ let http = require('http');
 
 // console.timeEnd(timerName)
 
-const https = require('https')
+console.log('Hello')
+
+const https = require('https');
+
 const options = {
-  hostname: 'flaviocopes.com',
+  hostname: 'reqres.in',
   port: 443,
-  path: '/todos',
+  path: '/api/users?page=2',
   method: 'GET'
 }
 
 const req = https.request(options, (res) => {
-  console.log(`statusCode: ${res.statusCode}`)
+  // console.log(`statusCode: ${res.statusCode}`)
+  // // console.log(res.data)
+  // res.on('data', (d) => {
+  //   process.stdout.write(d)
+  //   // console.log(d)
+  // })
+  var body = '';
 
-  res.on('data', (d) => {
-    process.stdout.write(d)
-  })
+  res.on('data', function (chunk) {
+    body = body + chunk;
+  });
+
+  res.on('end',function(){
+    console.log("Body :" + body);
+    if (res.statusCode != 200) {
+      console.log("Api call failed with response code " + res.statusCode);
+    } else {
+      console.log(null);
+    }
+  });
+
 })
 
 req.on('error', (error) => {
   console.error(error)
 })
 
-req.end()
+req.end();
+
+console.log('world')
