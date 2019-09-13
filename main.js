@@ -639,9 +639,7 @@ let http = require('http');
 
 
 let data = [ { name: "Ganesh"}, { name: "Reshma"}, { name: "Pradeep"}, { name: "Rashmi"}];
-
 let [name] = data;
-
 console.log(name)
 
 // var things = ["Table", "Chair", "Fan", "Rug"];
