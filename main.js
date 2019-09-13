@@ -594,45 +594,56 @@ let http = require('http');
 
 // console.timeEnd(timerName)
 
-console.log('Hello')
+// console.log('Hello')
 
-const https = require('https');
+// const https = require('https');
 
-const options = {
-  hostname: 'reqres.in',
-  port: 443,
-  path: '/api/users?page=2',
-  method: 'GET'
-}
+// const options = {
+//   hostname: 'reqres.in',
+//   port: 443,
+//   path: '/api/users?page=2',
+//   method: 'GET'
+// }
 
-const req = https.request(options, (res) => {
-  // console.log(`statusCode: ${res.statusCode}`)
-  // // console.log(res.data)
-  // res.on('data', (d) => {
-  //   process.stdout.write(d)
-  //   // console.log(d)
-  // })
-  var body = '';
+// const req = https.request(options, (res) => {
+//   // console.log(`statusCode: ${res.statusCode}`)
+//   // // console.log(res.data)
+//   // res.on('data', (d) => {
+//   //   process.stdout.write(d)
+//   //   // console.log(d)
+//   // })
+//   var body = '';
 
-  res.on('data', function (chunk) {
-    body = body + chunk;
-  });
+//   res.on('data', function (chunk) {
+//     body = body + chunk;
+//   });
 
-  res.on('end',function(){
-    console.log("Body :" + body);
-    if (res.statusCode != 200) {
-      console.log("Api call failed with response code " + res.statusCode);
-    } else {
-      console.log(null);
-    }
-  });
+//   res.on('end',function(){
+//     console.log("Body :" + body);
+//     if (res.statusCode != 200) {
+//       console.log("Api call failed with response code " + res.statusCode);
+//     } else {
+//       console.log(null);
+//     }
+//   });
 
-})
+// })
 
-req.on('error', (error) => {
-  console.error(error)
-})
+// req.on('error', (error) => {
+//   console.error(error)
+// })
 
-req.end();
+// req.end();
 
-console.log('world')
+// console.log('world')
+
+
+let data = [ { name: "Ganesh"}, { name: "Reshma"}, { name: "Pradeep"}, { name: "Rashmi"}];
+
+let [name] = data;
+
+console.log(name)
+
+// var things = ["Table", "Chair", "Fan", "Rug"];
+// var [a, b, c, d, e] = things;
+// console.log(d);
