@@ -524,17 +524,44 @@
 
 // getEmployees()
 
-var http = require('http');
-   http.get('http://eternagame.wikia.com/wiki/EteRNA_Dictionary', function(res){
-        var str = '';
-        console.log('Response is '+res.statusCode);
+// var http = require('http');
+//    http.get('http://eternagame.wikia.com/wiki/EteRNA_Dictionary', function(res){
+//         var str = '';
+//         console.log('Response is '+res.statusCode);
 
-        res.on('data', function (chunk) {
-               str += chunk;
-         });
+//         res.on('data', function (chunk) {
+//                str += chunk;
+//          });
 
-        res.on('end', function () {
-             console.log(str);
-        });
+//         res.on('end', function () {
+//              console.log(str);
+//         });
 
-  });
+//   });
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+     res.send(`
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Learning JavaScript - Vanilla</title>
+     </head>
+     <body>
+          <div class = "container">
+               <h1>Product Name</h1>
+               <h3>Short Description</h3>
+               <p>adasdhhpq.ksjdvsidfh;is sidhfishdfioshdfonxknaslndaskd</p>
+          </div>
+     </body>
+     </html>
+     `)
+});
+
+app.listen(3000);
