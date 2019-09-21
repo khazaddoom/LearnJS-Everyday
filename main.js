@@ -503,10 +503,47 @@
 
 // console.log(`My name is ${name}`)
 
-// let http = require('http');
+let http = require('http');
+
+// console.log(http.get);
+
+// var options = {
+//   host: 'https://reqres.in',
+//   path: '/api/users?page=2'
+// };
+
+// http.get(options, function(resp){
+//   resp.on('data', function(chunk){
+//     console.log('something!!!')
+//   });
+// }).on("error", function(e){
+//   console.log("Got error: " + e.message);
+// });
+
+// var options = {
+//   host: 'http://reqres.in',
+//   port: 443,
+//   path: '/api/users?page=2',
+//   method: 'GET'
+// };
+
+// var req = http.request(options, function(res) {
+//   console.log('STATUS: ' + res.statusCode);
+//   console.log('HEADERS: ' + JSON.stringify(res.headers));
+//   res.setEncoding('utf8');
+//   res.on('data', function (chunk) {
+//     console.log('BODY: ' + chunk);
+//   });
+// });
+
+// // write data to request body
+// req.write('data\n');
+// req.write('data\n');
+// req.end();
+
 
 // http.get('http://reqres.in/api/users?page=2', (err, res, body) => {
-//   console.log(err)
+//   console.log(res)
 // })
 
 // function getEmployees() {
@@ -538,6 +575,77 @@
 //         });
 
 //   });
+
+// const timerName = 'Array Map'
+
+// const initialArray = (
+//   Array(10000000)
+//   .fill(null)
+// )
+
+// console.time(timerName)
+
+// // initialArray.map(String)
+// const newArray = []
+
+// for (let i = 0, l = initialArray.length; i < l; i++) {
+//   newArray[i] = String(initialArray[i])
+// }
+
+// console.timeEnd(timerName)
+
+// console.log('Hello')
+
+// const https = require('https');
+
+// const options = {
+//   hostname: 'reqres.in',
+//   port: 443,
+//   path: '/api/users?page=2',
+//   method: 'GET'
+// }
+
+// const req = https.request(options, (res) => {
+//   // console.log(`statusCode: ${res.statusCode}`)
+//   // // console.log(res.data)
+//   // res.on('data', (d) => {
+//   //   process.stdout.write(d)
+//   //   // console.log(d)
+//   // })
+//   var body = '';
+
+//   res.on('data', function (chunk) {
+//     body = body + chunk;
+//   });
+
+//   res.on('end',function(){
+//     console.log("Body :" + body);
+//     if (res.statusCode != 200) {
+//       console.log("Api call failed with response code " + res.statusCode);
+//     } else {
+//       console.log(null);
+//     }
+//   });
+
+// })
+
+// req.on('error', (error) => {
+//   console.error(error)
+// })
+
+// req.end();
+
+// console.log('world')
+
+
+let data = [ { name: "Ganesh"}, { name: "Reshma"}, { name: "Pradeep"}, { name: "Rashmi"}];
+let [name] = data;
+console.log(name)
+
+// var things = ["Table", "Chair", "Fan", "Rug"];
+// var [a, b, c, d, e] = things;
+// console.log(d);
+
 
 const express = require('express');
 
