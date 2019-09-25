@@ -503,7 +503,7 @@
 
 // console.log(`My name is ${name}`)
 
-let http = require('http');
+// let http = require('http');
 
 // console.log(http.get);
 
@@ -638,38 +638,45 @@ let http = require('http');
 // console.log('world')
 
 
-let data = [ { name: "Ganesh"}, { name: "Reshma"}, { name: "Pradeep"}, { name: "Rashmi"}];
-let [name] = data;
-console.log(name)
+// let data = [ { name: "Ganesh"}, { name: "Reshma"}, { name: "Pradeep"}, { name: "Rashmi"}];
+// let [name] = data;
+// console.log(name)
 
-// var things = ["Table", "Chair", "Fan", "Rug"];
-// var [a, b, c, d, e] = things;
-// console.log(d);
+// // var things = ["Table", "Chair", "Fan", "Rug"];
+// // var [a, b, c, d, e] = things;
+// // console.log(d);
 
 
-const express = require('express');
+// const express = require('express');
 
-const app = express();
+// const app = express();
 
-app.get('/', (req, res) => {
-     res.send(`
-     <!DOCTYPE html>
-     <html lang="en">
-     <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Learning JavaScript - Vanilla</title>
-     </head>
-     <body>
-          <div class = "container">
-               <h1>Product Name</h1>
-               <h3>Short Description</h3>
-               <p>adasdhhpq.ksjdvsidfh;is sidhfishdfioshdfonxknaslndaskd</p>
-          </div>
-     </body>
-     </html>
-     `)
-});
+// app.get('/', (req, res) => {
+//      res.send(`
+//      <!DOCTYPE html>
+//      <html lang="en">
+//      <head>
+//      <meta charset="UTF-8">
+//      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+//      <title>Learning JavaScript - Vanilla</title>
+//      </head>
+//      <body>
+//           <div class = "container">
+//                <h1>Product Name</h1>
+//                <h3>Short Description</h3>
+//                <p>adasdhhpq.ksjdvsidfh;is sidhfishdfioshdfonxknaslndaskd</p>
+//           </div>
+//      </body>
+//      </html>
+//      `)
+// });
 
-app.listen(3000);
+// app.listen(3000);
+
+
+const test = rxjs.Observable.create((observer) => {
+     observer.next("Hello World!!!")
+})
+
+test.subscribe( x => console.log(x))
