@@ -675,8 +675,19 @@
 // app.listen(3000);
 
 
-const test = rxjs.Observable.create((observer) => {
-     observer.next("Hello World!!!")
-})
+// const test = rxjs.Observable.create((observer) => {
+//      observer.next("Hello World!!!")
+// })
 
-test.subscribe( x => console.log(x))
+// test.subscribe( x => console.log(x))
+
+// const observable = rxjs.Observable.Of("hello", 100, { color: 'red'}, true);
+
+// observable.subscribe()
+
+// const observable = rxjs.Observable.of(document, 'click');
+
+// const texts = rxjs.Observable.of('Hello', 'World');
+
+// texts.do(val => console.log(val))
+
