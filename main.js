@@ -691,3 +691,19 @@
 
 // texts.do(val => console.log(val))
 
+// console.log([1, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+//     console.log(accumulator, currentValue, currentIndex, array)
+//     return accumulator + currentValue;
+//   }));
+const Observable = require('rxjs')
+ 
+const numbers = Observable.interval(1000)
+                          .finally(() => console.log("I am done..."))
+
+numbers.subscribe( () => console.log("Done..."))
+
+setTimeout(() => {
+    numbers.unsubscribe();
+}, 3000);
+ 
+
