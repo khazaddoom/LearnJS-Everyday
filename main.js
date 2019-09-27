@@ -697,13 +697,12 @@
 //   }));
 const Observable = require('rxjs')
  
-const numbers = Observable.interval(1000)
-                          .finally(() => console.log("I am done..."))
+const numbers = Observable.interval(1000);
 
-numbers.subscribe( () => console.log("Done..."))
+const subscription = numbers.subscribe(() => console.log("Done..."))
 
 setTimeout(() => {
-    numbers.unsubscribe();
-}, 3000);
+    subscription.unsubscribe();
+}, 3200);
  
 
