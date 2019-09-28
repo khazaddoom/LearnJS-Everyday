@@ -695,14 +695,22 @@
 //     console.log(accumulator, currentValue, currentIndex, array)
 //     return accumulator + currentValue;
 //   }));
-const Observable = require('rxjs')
+// const Observable = require('rxjs')
  
-const numbers = Observable.interval(1000);
+// const numbers = Observable.interval(1000);
 
-const subscription = numbers.subscribe(() => console.log("Done..."))
+// const subscription = numbers.subscribe(() => console.log("Done..."))
 
-setTimeout(() => {
-    subscription.unsubscribe();
-}, 3200);
+// setTimeout(() => {
+//     subscription.unsubscribe();
+// }, 3200);
+
+const rxjs = require('rxjs')
+
+const temp = rxjs.Observable.create((observer) => {
+    observer.next(500);
+})
+
+temp.subscribe(val => console.log(val));
  
 
