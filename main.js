@@ -705,12 +705,14 @@
 //     subscription.unsubscribe();
 // }, 3200);
 
-const rxjs = require('rxjs')
+// const rxjs = require('rxjs')
 
-const temp = rxjs.Observable.create((observer) => {
-    observer.next(500);
-})
+// const temp = rxjs.Observable.create((observer) => {
+//     observer.next(500);
+// })
 
-temp.subscribe(val => console.log(val));
+// temp.subscribe(val => console.log(val));
+
+
  
 
