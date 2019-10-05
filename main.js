@@ -713,6 +713,20 @@
 
 // temp.subscribe(val => console.log(val));
 
+function division(a, b) {
+  return new Promise((resolve, reject) => {
 
+    if((typeof a) === 'number' && (typeof b) === 'number')
+      resolve(a/b);
+    else
+      resolve("Input datatype is wrong!")
+
+  })
+}
  
+
+division(100, 10).then(val => console.log(val))
+division(100, '10').then(val => console.log(val)).catch(err => {
+  console.log(err)
+})
 
