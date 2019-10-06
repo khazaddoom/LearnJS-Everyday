@@ -719,7 +719,7 @@ function division(a, b) {
     if((typeof a) === 'number' && (typeof b) === 'number')
       resolve(a/b);
     else
-      resolve("Input datatype is wrong!")
+      reject("Input datatype is wrong!")
 
   })
 }
