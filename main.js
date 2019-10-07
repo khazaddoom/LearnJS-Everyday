@@ -742,12 +742,30 @@
 //   console.log("My dummy function!")
 // }
 
-var age = 32;
+// var age = 32;
 
-function myAge() {
-  console.log(age);
-  var age = 33;
-  console.log(age)
-};
+// function myAge() {
+//   console.log(age);
+//   var age = 33;
+//   console.log(age)
+// };
 
-myAge();
+// myAge();
+
+var a = "Hi";
+first();
+
+function first() {  
+  var b = "Hello";
+  second();
+  function second() {
+    var c = "Bye";
+    third();
+    
+  }
+}
+
+function third() {
+  var d = "chow";
+  console.log(a + b + c + d)
+}
