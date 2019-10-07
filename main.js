@@ -790,8 +790,10 @@
 
 var i = 23;
 
-for(var i=0; i< 5; i++) {
-  console.log(i);
-}
+var i = 50;
+
+// for(var i=0; i< 5; i++) {
+//   console.log(i);
+// }
 
 console.log(i);
