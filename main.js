@@ -752,20 +752,22 @@
 
 // myAge();
 
-var a = "Hi";
-first();
+// var a = "Hi";
+// first();
 
-function first() {  
-  var b = "Hello";
-  second();
-  function second() {
-    var c = "Bye";
-    third();
+// function first() {  
+//   var b = "Hello";
+//   second();
+//   function second() {
+//     var c = "Bye";
+//     third();
     
-  }
-}
+//   }
+// }
 
-function third() {
-  var d = "chow";
-  console.log(a + b + c + d)
-}
+// function third() {
+//   var d = "chow";
+//   console.log(a + b + c + d)
+// }
+
+console.log(this)
