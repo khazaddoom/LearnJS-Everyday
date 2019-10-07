@@ -769,21 +769,29 @@
 //   var d = "chow";
 //   console.log(a + b + c + d)
 // }
-var Ganesh = {
-  name: 'Ganesh',
-  yearOfBirth: 1986,
-  calculateAge: function() {
-    console.log(`Hello my name is ${this.name}, I am ${2019-this.yearOfBirth} years old!`);
-  }
+// var Ganesh = {
+//   name: 'Ganesh',
+//   yearOfBirth: 1986,
+//   calculateAge: function() {
+//     console.log(`Hello my name is ${this.name}, I am ${2019-this.yearOfBirth} years old!`);
+//   }
+// }
+
+// Ganesh.calculateAge();
+
+// var Reshma = {
+//   name: 'Reshma',
+//   yearOfBirth: 1989
+// }
+
+// Reshma.calculateAge = Ganesh.calculateAge;
+
+// Reshma.calculateAge();
+
+var i = 23;
+
+for(var i=0; i< 5; i++) {
+  console.log(i);
 }
 
-Ganesh.calculateAge();
-
-var Reshma = {
-  name: 'Reshma',
-  yearOfBirth: 1989
-}
-
-Reshma.calculateAge = Ganesh.calculateAge;
-
-Reshma.calculateAge();
+console.log(i);
