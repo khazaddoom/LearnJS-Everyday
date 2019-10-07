@@ -731,6 +731,23 @@
 // })
 
 
-var a = 100;
+// var a = 100;
 
-console.log(a)
+// console.log(a)
+
+
+// myFun();
+
+// var myFun = function() {
+//   console.log("My dummy function!")
+// }
+
+var age = 32;
+
+function myAge() {
+  console.log(age);
+  var age = 33;
+  console.log(age)
+};
+
+myAge();
