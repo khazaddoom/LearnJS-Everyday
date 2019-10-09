@@ -805,3 +805,10 @@
 // hello.subscribe(value => console.log(value));
 
 // console.log('World!')
+let Rx = require('rxjs')
+
+const hello = Rx.of('Hello');
+
+hello.subscribe(val => console.log(val))
+
+console.log('world')
