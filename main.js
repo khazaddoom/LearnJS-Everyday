@@ -824,12 +824,28 @@
 
 // retirementIndia(1986)
 
-function interviewQuestion(job) {
-    return function(name) {
-        if(job == 'designer') console.log(`Hello ${name}, can you explain what is UI/UX design?`);
-        if(job == 'developer') console.log(`Hello ${name}, can you explain closures?`);
-    }
+// function interviewQuestion(job) {
+//     return function(name) {
+//         if(job == 'designer') console.log(`Hello ${name}, can you explain what is UI/UX design?`);
+//         if(job == 'developer') console.log(`Hello ${name}, can you explain closures?`);
+//     }
+// }
+
+// interviewQuestion('developer')('Ashwath')
+// interviewQuestion('designer')('Nayana')
+
+// var john = ['john', 26];
+
+// const [name, age] = john;
+
+// console.log(name + ' : ' + age)
+
+var john = {
+    name: 'John Smith',
+    age: 25
 }
 
-interviewQuestion('developer')('Ashwath')
-interviewQuestion('designer')('Nayana')
+
+const { name, age } = john;
+
+console.log(age)
