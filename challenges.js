@@ -1,14 +1,9 @@
 // sum
 
 function sum(...arguments) {
-    // let sum = 0;
-    // Array.from(arguments).forEach( element => {
-    //     sum += element;
-    // })
-
-    // console.log(sum)
-
-    arguments.forEach( element => console.log(element))
+   
+    let sum = arguments.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    console.log(sum)
 
 }
 
