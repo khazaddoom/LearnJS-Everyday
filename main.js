@@ -788,12 +788,20 @@
 
 // Reshma.calculateAge();
 
-var i = 23;
+// var i = 23;
 
-var i = 50;
+// var i = 50;
 
-// for(var i=0; i< 5; i++) {
-//   console.log(i);
-// }
+// // for(var i=0; i< 5; i++) {
+// //   console.log(i);
+// // }
 
-console.log(i);
+// console.log(i);
+
+// const of = require('rxjs/')
+
+// const hello = of('Hello');
+
+// hello.subscribe(value => console.log(value));
+
+// console.log('World!')
