@@ -805,10 +805,21 @@
 // hello.subscribe(value => console.log(value));
 
 // console.log('World!')
-let Rx = require('rxjs')
+// let Rx = require('rxjs')
 
-const hello = Rx.of('Hello');
+// const hello = Rx.of('Hello');
 
-hello.subscribe(val => console.log(val))
+// hello.subscribe(val => console.log(val))
 
-console.log('world')
+// console.log('world')
+
+function retirement(retirementCriteria) {
+    return function(yearOfBirth) {
+        var age = 2019 - yearOfBirth;
+        console.log((retirementCriteria - age) + ' years until retirement!')
+    }
+}
+
+var retirementIndia = retirement(58);
+
+retirementIndia(1986)
