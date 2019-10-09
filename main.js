@@ -813,13 +813,23 @@
 
 // console.log('world')
 
-function retirement(retirementCriteria) {
-    return function(yearOfBirth) {
-        var age = 2019 - yearOfBirth;
-        console.log((retirementCriteria - age) + ' years until retirement!')
+// function retirement(retirementCriteria) {
+//     return function(yearOfBirth) {
+//         var age = 2019 - yearOfBirth;
+//         console.log((retirementCriteria - age) + ' years until retirement!')
+//     }
+// }
+
+// var retirementIndia = retirement(58);
+
+// retirementIndia(1986)
+
+function interviewQuestion(job) {
+    return function(name) {
+        if(job == 'designer') console.log(`Hello ${name}, can you explain what is UI/UX design?`);
+        if(job == 'developer') console.log(`Hello ${name}, can you explain closures?`);
     }
 }
 
-var retirementIndia = retirement(58);
-
-retirementIndia(1986)
+interviewQuestion('developer')('Ashwath')
+interviewQuestion('designer')('Nayana')
