@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/khazaddoom/LearnJS-Everyday#readme",
   "dependencies": {
+    "babel": "^6.23.0",
     "express": "^4.17.1",
     "http": "0.0.0",
     "nodemon": "^1.19.2",
