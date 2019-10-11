@@ -805,3 +805,47 @@
 // hello.subscribe(value => console.log(value));
 
 // console.log('World!')
+// let Rx = require('rxjs')
+
+// const hello = Rx.of('Hello');
+
+// hello.subscribe(val => console.log(val))
+
+// console.log('world')
+
+// function retirement(retirementCriteria) {
+//     return function(yearOfBirth) {
+//         var age = 2019 - yearOfBirth;
+//         console.log((retirementCriteria - age) + ' years until retirement!')
+//     }
+// }
+
+// var retirementIndia = retirement(58);
+
+// retirementIndia(1986)
+
+// function interviewQuestion(job) {
+//     return function(name) {
+//         if(job == 'designer') console.log(`Hello ${name}, can you explain what is UI/UX design?`);
+//         if(job == 'developer') console.log(`Hello ${name}, can you explain closures?`);
+//     }
+// }
+
+// interviewQuestion('developer')('Ashwath')
+// interviewQuestion('designer')('Nayana')
+
+// var john = ['john', 26];
+
+// const [name, age] = john;
+
+// console.log(name + ' : ' + age)
+
+var john = {
+    name: 'John Smith',
+    age: 25
+}
+
+
+const { name, age } = john;
+
+console.log(age)
