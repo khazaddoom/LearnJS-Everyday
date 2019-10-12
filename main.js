@@ -840,12 +840,28 @@
 
 // console.log(name + ' : ' + age)
 
-var john = {
-    name: 'John Smith',
-    age: 25
+// var john = {
+//     name: 'John Smith',
+//     age: 25
+// }
+
+
+// const { name, age } = john;
+
+// console.log(age)
+
+let Rx = require('rxjs');
+
+const myObservable = new Rx.Observable(observer => {
+    observer.next('Apple 1');
+    observer.next('Apple 2');
+    observer.complete();
+});
+
+const observer = {
+    next: emittedValue => console.log(`Something was emitted with value ${emittedValue}`),
+    error: error => console.log(`Something went wrong...${error}`),
+    complete: () => console.log(`Stream completed...`)
 }
 
-
-const { name, age } = john;
-
-console.log(age)
+const sub = myObservable.subscribe(observer);
