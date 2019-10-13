@@ -884,3 +884,13 @@
 
 // of(10, 20).subscribe((value) => console.log(`Emiting...${value}`))
 
+const { interval }  = require('rxjs');
+const { map, take } = require('rxjs/operators')
+
+const obs = interval(1000).pipe(
+    map((value) => value + 1),
+    take(5)
+);
+
+obs.subscribe((value)=> console.log(value));
+
