@@ -65,8 +65,7 @@ var jane = {
     name: "Jane",
     
     logHello: function (friends) {
-        // var that = this;  // (*)
-        friends.forEach( (friend) => {
+        friends.forEach( function(friend) {
             console.log(this.name + " says hello to " + friend)
         });
     }
