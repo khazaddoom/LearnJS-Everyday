@@ -850,18 +850,47 @@
 
 // console.log(age)
 
-let Rx = require('rxjs');
+// let Rx = require('rxjs');
+// let RxCompat = require('rxjs-compat/operators');
 
-const myObservable = new Rx.Observable(observer => {
-    observer.next('Apple 1');
-    observer.next('Apple 2');
-    observer.complete();
-});
+// // const myObservable = new Rx.Observable(observer => {
+// //     observer.next('Apple 1');
+// //     observer.next('Apple 2');
+// //     observer.complete();
+// // });
 
-const observer = {
-    next: emittedValue => console.log(`Something was emitted with value ${emittedValue}`),
-    error: error => console.log(`Something went wrong...${error}`),
-    complete: () => console.log(`Stream completed...`)
-}
+// // const observer = {
+// //     next: emittedValue => console.log(`Something was emitted with value ${emittedValue}`),
+// //     error: error => console.log(`Something went wrong...${error}`),
+// //     complete: () => console.log(`Stream completed...`)
+// // }
 
-const sub = myObservable.subscribe(observer);
+// // const sub = myObservable.subscribe(observer);
+
+// // Rx.of(35, 33, 31, 30)
+// //     .pipe(
+// //         RxCompat.map( item => { age: item })
+// //     ).subscribe( value => console.log(value))
+
+
+// const source = Rx.interval(1000)
+//                  .pipe(
+//                      RxCompat.tap(() => console.log('Side Effect...'))
+//                  );
+
+// const sub1 = source.subscribe();
+
+// const { of }  = require('rxjs');
+
+// of(10, 20).subscribe((value) => console.log(`Emiting...${value}`))
+
+const { interval }  = require('rxjs');
+const { map, take } = require('rxjs/operators')
+
+const obs = interval(1000).pipe(
+    map((value) => value + 1),
+    take(5)
+);
+
+obs.subscribe((value)=> console.log(value));
+
