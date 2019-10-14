@@ -60,3 +60,16 @@
 //         return this
 //     }
 // }
+
+var jane = {
+    name: "Jane",
+    
+    logHello: function (friends) {
+        // var that = this;  // (*)
+        friends.forEach( (friend) => {
+            console.log(this.name + " says hello to " + friend)
+        });
+    }
+}
+
+jane.logHello(['John', 'Tina'])
