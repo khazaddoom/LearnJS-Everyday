@@ -61,14 +61,23 @@
 //     }
 // }
 
-var jane = {
-    name: "Jane",
+// var jane = {
+//     name: "Jane",
     
-    logHello: function (friends) {
-        friends.forEach( function(friend) {
-            console.log(this.name + " says hello to " + friend)
-        });
-    }
-}
+//     logHello: function (friends) {
+//         console.log(this)
+//         friends.forEach( function(friend) {
+//             console.log(this.name + " says hello to " + friend)
+//         });
+//     }
+// }
 
-jane.logHello(['John', 'Tina'])
+// jane.logHello(['John', 'Tina'])
+
+
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Hello'));
+const promises = [promise1, promise2];
+
+Promise.all(promises).
+  then((results) => results.forEach((result) => console.log(result)));
