@@ -884,13 +884,35 @@
 
 // of(10, 20).subscribe((value) => console.log(`Emiting...${value}`))
 
-const { interval }  = require('rxjs');
-const { map, take } = require('rxjs/operators')
+// const { interval }  = require('rxjs');
+// const { map, take } = require('rxjs/operators')
 
-const obs = interval(1000).pipe(
-    map((value) => value + 1),
-    take(5)
-);
+// const obs = interval(1000).pipe(
+//     map((value) => value + 1),
+//     take(5)
+// );
 
-obs.subscribe((value)=> console.log(value));
+// obs.subscribe((value)=> console.log(value));
+
+
+const users = [
+    { name: 'Marie', age: 25 },
+    { name: 'Ken', age: 22 },
+    { name: 'Sara', age: 29 },
+    { name: 'Geoff', age: 30 },
+  ];
+
+  const totalAge = users.reduce((total, currentUser) => {
+    console.log('current total:', total);
+    console.log('currentUser:', currentUser);
+    
+    // just for spacing
+    console.log('\n');
+    
+    return total + currentUser.age;
+  }, 0);
+
+  console.log(totalAge)
+
+
 
