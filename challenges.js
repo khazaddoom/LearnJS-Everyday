@@ -29,12 +29,55 @@
 //     console.log(c);
 
 
-function splitAtX(input) {
+// function splitAtX(input) {
 
-    let arr = input.split('X');
-    if(arr[0].length > arr[1].length) return arr[0];
-    else return arr[1];
-}
+//     let arr = input.split('X');
+//     if(arr[0].length > arr[1].length) return arr[0];
+//     else return arr[1];
+// }
 
 
-console.log(splitAtX('HelsdsadXworlloasdad'));
+// console.log(splitAtX('HelsdsadXworlloasdad'));
+
+// (function () {
+//     let a = b = 5;
+// })();
+
+// console.log(b)
+
+// let john = {
+//     name: 'John',
+//     yearOfBirth: 1986,
+//     calculateAge: function() {
+//         return this
+//     }
+// }
+
+// let terry = {
+//     name: 'Terry',
+//     yearOfBirth: 1990,
+//     calculateAge: () => {
+//         return this
+//     }
+// }
+
+// var jane = {
+//     name: "Jane",
+    
+//     logHello: function (friends) {
+//         console.log(this)
+//         friends.forEach( function(friend) {
+//             console.log(this.name + " says hello to " + friend)
+//         });
+//     }
+// }
+
+// jane.logHello(['John', 'Tina'])
+
+
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Hello'));
+const promises = [promise1, promise2];
+
+Promise.all(promises).
+  then((results) => results.forEach((result) => console.log(result)));
