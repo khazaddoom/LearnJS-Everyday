@@ -902,17 +902,53 @@ const users = [
     { name: 'Geoff', age: 30 },
   ];
 
-  const totalAge = users.reduce((total, currentUser) => {
-    console.log('current total:', total);
-    console.log('currentUser:', currentUser);
+//   const totalAge = users.reduce((total, currentUser) => {
+//     console.log('current total:', total);
+//     console.log('currentUser:', currentUser);
     
-    // just for spacing
-    console.log('\n');
+//     // just for spacing
+//     console.log('\n');
     
-    return total + currentUser.age;
-  }, 0);
+//     return total + currentUser.age;
+//   }, 0);
 
-  console.log(totalAge)
+//   console.log(totalAge);
+
+
+
+//   function myreduce(array, reducer, initialValue) {
+//       array.forEach(element => {
+//           console.log(`Current element ${JSON.stringify(element)}`)
+//           console.log('current total:', initialValue);
+//           console.log('\n');
+//           initialValue = reducer(element, initialValue);
+//       });
+//       return initialValue
+//   }
+
+//   function reducer(element, initialValue) {
+//       return element.age + initialValue;
+//   }
+
+//   console.log(myreduce(users, reducer, 0))
+
+let arr = [], set = new Set(), n = 500;
+for (let i = 0; i < n; i++) {
+  arr.push(i);
+  set.add(i);
+}
+
+
+let result;
+
+console.time('Array'); 
+result = arr.indexOf(123123) !== -1; 
+console.timeEnd('Array');
+
+console.time('Set'); 
+result = set.has(123123); 
+console.timeEnd('Set');
+
 
 
 
