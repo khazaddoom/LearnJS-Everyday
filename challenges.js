@@ -84,8 +84,16 @@
 
 
 
-((a, b) => {
-  setTimeout(() => {
-    console.log((() => a * b)());
-  }, 1000);
-})(10, 20)
+// ((a, b) => {
+//   setTimeout(() => {
+//     console.log((() => a * b)());
+//   }, 1000);
+// })(10, 20)
+
+
+const mult = (a, b) => a * b;
+
+
+setTimeout(() => {
+  console.log( mult(5, 10))
+}, 1000);
