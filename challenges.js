@@ -111,12 +111,33 @@
 // console.log(mult(obj));
 
 
-let arr = [1, 2, 3, 4]
+// let arr = [1, 2, 3, 4]
 
-let [...brr] = arr;
+// // let [...brr] = arr;
 
-brr[0] = 100
+// // brr[0] = 100
 
-console.log(arr)
+// // console.log(arr)
 
-console.log(brr)
+// // console.log(brr)
+
+// let b;
+
+// b = [...arr]
+
+// b.push('new element')
+
+// console.log(b)
+
+let cars = [
+  { brand: 'Home', price: 13000},
+  { brand: 'Rolls Royce', price: 100000}
+];
+
+
+function carInfo(car) {
+  const str = car.price > 20000? 'very expensive!' : 'cheap...'
+  return `Price of my new ${car.brand} is ${car.price}$ and it is ${str}`
+}
+
+cars.forEach( car => console.log(carInfo(car)))
