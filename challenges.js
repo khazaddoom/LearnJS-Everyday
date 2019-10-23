@@ -75,9 +75,17 @@
 // jane.logHello(['John', 'Tina'])
 
 
-const promise1 = Promise.resolve(3);
-const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Hello'));
-const promises = [promise1, promise2];
+// const promise1 = Promise.resolve(3);
+// const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Hello'));
+// const promises = [promise1, promise2];
 
-Promise.all(promises).
-  then((results) => results.forEach((result) => console.log(result)));
+// Promise.all(promises).
+//   then((results) => results.forEach((result) => console.log(result)));
+
+
+
+((a, b) => {
+  setTimeout(() => {
+    console.log((() => a * b)());
+  }, 1000);
+})(10, 20)
