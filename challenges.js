@@ -98,14 +98,25 @@
 //   console.log( mult(5, 10))
 // }, 1000);
 
-var obj = {
-  x: 5,
-  y: 20,
-  z: 3
-}
+// var obj = {
+//   x: 5,
+//   y: 20,
+//   z: 3
+// }
 
-function mult({ x, y, z}) {
-  return x * y * z; 
-}
+// function mult({ x, y, z}) {
+//   return x * y * z; 
+// }
 
-console.log(mult(obj));
+// console.log(mult(obj));
+
+
+let arr = [1, 2, 3, 4]
+
+let [...brr] = arr;
+
+brr[0] = 100
+
+console.log(arr)
+
+console.log(brr)
