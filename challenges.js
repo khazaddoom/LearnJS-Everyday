@@ -91,9 +91,21 @@
 // })(10, 20)
 
 
-const mult = (a, b) => a * b;
+// const mult = (a, b) => a * b;
 
 
-setTimeout(() => {
-  console.log( mult(5, 10))
-}, 1000);
+// setTimeout(() => {
+//   console.log( mult(5, 10))
+// }, 1000);
+
+var obj = {
+  x: 5,
+  y: 20,
+  z: 3
+}
+
+function mult({ x, y, z}) {
+  return x * y * z; 
+}
+
+console.log(mult(obj));
