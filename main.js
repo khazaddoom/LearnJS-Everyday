@@ -959,6 +959,11 @@ const book = {
 
 const { price, currency, ...newBook} = book
 
+
+newBook.released = 'yes'
+
+console.log(book)
+
 console.log(newBook)
 
 
