@@ -949,7 +949,11 @@ const users = [
 // result = set.has(123123); 
 // console.timeEnd('Set');
 
+const value = {
+  val: '1233123'
+};
 
+value = {}
 
 
 
