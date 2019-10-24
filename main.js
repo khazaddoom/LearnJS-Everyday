@@ -949,11 +949,18 @@ const users = [
 // result = set.has(123123); 
 // console.timeEnd('Set');
 
-const value = {
-  val: '1233123'
+const book = {
+  title: 'CSS Secrets',
+  author: 'Lea Verou',
+  price: 1500,
+  currency: 'INR'
 };
 
-value = {}
+
+const { price, currency, ...newBook} = book
+
+console.log(newBook)
+
 
 
 
