@@ -143,14 +143,17 @@
 // cars.forEach( car => console.log(carInfo(car)))
 
 
-let arr = [ 1, 2, 3, 4]
+// let arr = [ 1, 2, 3, 4]
 
-let brr = arr.map( value => value *2);
+// let brr = arr.map( value => value *2);
 
-brr[0] = 1000;
+// brr[0] = 1000;
 
 
-console.log(arr)
+// console.log(arr)
 
-console.log(brr)
+// console.log(brr)
+
+
+console.log(window.navigator.userAgent.replace(/\D+/g, ''))
 
