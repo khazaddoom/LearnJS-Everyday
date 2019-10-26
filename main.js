@@ -895,12 +895,12 @@
 // obs.subscribe((value)=> console.log(value));
 
 
-const users = [
-    { name: 'Marie', age: 25 },
-    { name: 'Ken', age: 22 },
-    { name: 'Sara', age: 29 },
-    { name: 'Geoff', age: 30 },
-  ];
+// const users = [
+//     { name: 'Marie', age: 25 },
+//     { name: 'Ken', age: 22 },
+//     { name: 'Sara', age: 29 },
+//     { name: 'Geoff', age: 30 },
+//   ];
 
 //   const totalAge = users.reduce((total, currentUser) => {
 //     console.log('current total:', total);
@@ -949,24 +949,45 @@ const users = [
 // result = set.has(123123); 
 // console.timeEnd('Set');
 
-const book = {
-  title: 'CSS Secrets',
-  author: 'Lea Verou',
-  price: 1500,
-  currency: 'INR'
-};
+// const book = {
+//   title: 'CSS Secrets',
+//   author: 'Lea Verou',
+//   price: 1500,
+//   currency: 'INR'
+// };
 
 
-const { price, currency, ...newBook} = book
+// const { price, currency, ...newBook} = book
 
 
-newBook.released = 'yes'
+// newBook.released = 'yes'
 
-console.log(book)
+// console.log(book)
 
-console.log(newBook)
+// console.log(newBook)
 
 
+function maxHeartRate(age) {
 
+  if (age >= 18 && age <= 81) return Math.round(206.9 - (0.67 * age));
+  else return -1;
+}
+
+function getAge(yearOfBirth) {
+  return 2019-yearOfBirth;
+}
+
+let yearsOfBirth = [1986, 1982, 1989]
+let ages = arrayCalc(yearsOfBirth, getAge);
+
+
+function arrayCalc(arr, operatorFunction) {
+  let result = []
+  arr.forEach(element => {
+    result.push(operatorFunction(element));
+  });
+  return result;
+}
+console.log(arrayCalc(ages, maxHeartRate))
 
 
