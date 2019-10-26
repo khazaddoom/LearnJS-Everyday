@@ -155,5 +155,5 @@
 // console.log(brr)
 
 
-console.log(window.navigator.userAgent.replace(/\D+/g, ''))
+// console.log(window.navigator.userAgent.replace(/\D+/g, ''))
 
