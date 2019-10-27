@@ -949,22 +949,26 @@ const users = [
 // result = set.has(123123); 
 // console.timeEnd('Set');
 
-const book = {
-  title: 'CSS Secrets',
-  author: 'Lea Verou',
-  price: 1500,
-  currency: 'INR'
-};
+// const book = {
+//   title: 'CSS Secrets',
+//   author: 'Lea Verou',
+//   price: 1500,
+//   currency: 'INR'
+// };
 
 
-const { price, currency, ...newBook} = book
+// const { price, currency, ...newBook} = book
 
 
-newBook.released = 'yes'
+// newBook.released = 'yes'
 
-console.log(book)
+// console.log(book)
 
-console.log(newBook)
+// console.log(newBook)
+
+var { printMessage } = require('./print-message-module')
+
+printMessage('Ganesh')
 
 
 
