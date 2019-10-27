@@ -895,12 +895,12 @@
 // obs.subscribe((value)=> console.log(value));
 
 
-const users = [
-    { name: 'Marie', age: 25 },
-    { name: 'Ken', age: 22 },
-    { name: 'Sara', age: 29 },
-    { name: 'Geoff', age: 30 },
-  ];
+// const users = [
+//     { name: 'Marie', age: 25 },
+//     { name: 'Ken', age: 22 },
+//     { name: 'Sara', age: 29 },
+//     { name: 'Geoff', age: 30 },
+//   ];
 
 //   const totalAge = users.reduce((total, currentUser) => {
 //     console.log('current total:', total);
@@ -966,11 +966,33 @@ const users = [
 
 // console.log(newBook)
 
+// console.log(book)
+
+// function maxHeartRate(age) {
+
+//   if (age >= 18 && age <= 81) return Math.round(206.9 - (0.67 * age));
+//   else return -1;
+// }
+
+// function getAge(yearOfBirth) {
+//   return 2019-yearOfBirth;
+// }
+
+// let yearsOfBirth = [1986, 1982, 1989]
+// let ages = arrayCalc(yearsOfBirth, getAge);
+
+
+// function arrayCalc(arr, operatorFunction) {
+//   let result = []
+//   arr.forEach(element => {
+//     result.push(operatorFunction(element));
+//   });
+//   return result;
+// }
+// console.log(arrayCalc(ages, maxHeartRate))
+
 var printModule = require('./print-message-module')
 
 printModule.printMessage('Ganesh')
-
-
-
 
 
