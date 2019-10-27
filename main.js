@@ -966,9 +966,9 @@ const users = [
 
 // console.log(newBook)
 
-var { printMessage } = require('./print-message-module')
+var printModule = require('./print-message-module')
 
-printMessage('Ganesh')
+printModule.printMessage('Ganesh')
 
 
 
