@@ -1003,10 +1003,12 @@ let products$ = [
 ]
 
 
-products$.map( product => ({
-    id: product.id,
-    price: (product.price * 0.15),
-    name: product.name + 'asd'
-}))
+products$ = products$.map( product =>
+    ({
+        id: product.id,
+        price: (product.price +  product.price * 0.15),
+        name: product.name + 'asd'
+    })
+);
 
 console.table(products$)
