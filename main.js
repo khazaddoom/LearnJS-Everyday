@@ -1005,9 +1005,9 @@ let products$ = [
 
 products$ = products$.map( product =>
     ({
-        id: product.id,
+        ...product,
         price: (product.price +  product.price * 0.15),
-        name: product.name + 'asd'
+        
     })
 );
 
