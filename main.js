@@ -991,8 +991,22 @@
 // }
 // console.log(arrayCalc(ages, maxHeartRate))
 
-var printModule = require('./print-message-module')
+// var printModule = require('./print-message-module')
 
-printModule.printMessage('Ganesh')
+// printModule.printMessage('Ganesh')
 
 
+let products$ = [
+    { id: 100, price: 13000, name: 'Redmi Note 8'},
+    { id: 101, price: 17000, name: 'Redmi Note 8 pro'},
+    { id: 102, price: 45000, name: 'Apple iPhone XR'}
+]
+
+
+products$.map( product => ({
+    id: product.id,
+    price: (product.price * 0.15),
+    name: product.name + 'asd'
+}))
+
+console.table(products$)
