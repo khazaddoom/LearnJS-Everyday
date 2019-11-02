@@ -996,19 +996,45 @@
 // printModule.printMessage('Ganesh')
 
 
-let products$ = [
-    { id: 100, price: 13000, name: 'Redmi Note 8'},
-    { id: 101, price: 17000, name: 'Redmi Note 8 pro'},
-    { id: 102, price: 45000, name: 'Apple iPhone XR'}
-]
+// let products$ = [
+//     { id: 100, price: 13000, name: 'Redmi Note 8'},
+//     { id: 101, price: 17000, name: 'Redmi Note 8 pro'},
+//     { id: 102, price: 45000, name: 'Apple iPhone XR'}
+// ]
 
 
-products$ = products$.map( product =>
-    ({
-        ...product,
-        price: (product.price +  product.price * 0.15),
+// products$ = products$.map( product =>
+//     ({
+//         ...product,
+//         price: (product.price +  product.price * 0.15),
         
-    })
-);
+//     })
+// );
 
-console.table(products$)
+// console.table(products$)
+
+
+console.log("I'm about to flip a coin!");
+
+const flipACoin = new Promise((resolve, reject) => {
+  console.log("I'm flipping the coin!");
+  
+  const flipResult = flip(); //let's say flip() takes a few seconds
+  
+  if(flipResult) {
+    console.log("Here is the coin flip result!", flipResult);
+    resolve();
+  } else {
+    reject();
+  }
+}).then(() => {
+  console.log("I have flipped the coin.")
+}).catch(err => console.error(err));
+
+console.log("I have flipped the coin.")
+
+function flip() {
+    setTimeout(() => {
+     return {}   
+    }, 2000);
+}
