@@ -1040,12 +1040,37 @@
 // }
 
 
-let input = 'hello world'
+// let input = 'hello world'
 
-console.log((input => {
-    if (input.length < 3) return 'INVALID'
-    return input.slice(1, input.length - 1);
-})(input));
+// console.log((input => {
+//     if (input.length < 3) return 'INVALID'
+//     return input.slice(1, input.length - 1);
+// })(input));
 
 
-console.log(((someString) => someString.length > 2 ? someString.slice(1, -1) : undefined)(input))
+// console.log(((someString) => someString.length > 2 ? someString.slice(1, -1) : undefined)(input))
+
+
+let yearsOfBirth = [1982, 1986, 1991, 1996, 2002];
+
+function getAge(yearOfBirth) {
+    return 2019 - yearOfBirth;
+}
+
+function eligibleForVoting(eligibiltyAgeLimit, age) {
+    return (age - eligibiltyAgeLimit) >= 0
+}
+
+function arrayCalc(inputArray, operatorFunction) {
+    var res = [];
+    inputArray.forEach(element => {
+        res.push(operatorFunction(element)) 
+    });
+    return res;
+}
+
+var ages = arrayCalc(yearsOfBirth, getAge);
+
+var voitingEligibilityIndia = arrayCalc(ages, eligibleForVoting.bind(this, 18));
+
+console.log(voitingEligibilityIndia)
