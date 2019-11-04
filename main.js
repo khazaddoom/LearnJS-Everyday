@@ -38,21 +38,21 @@
 //   // code goes here  
 
 // //   function fact(num) {
-  
+
 // //   let factorial = 1;
-  
+
 // //   for(let i=num; i > 1; i--) {
-      
+
 // //       factorial = factorial * i;
-      
+
 // //   }
-  
+
 // //   return factorial; 
 
 // // }
 
 // // console.log(fact(3))
-         
+
 // // let yearsOfBirth = [1982, 1986, 1989, 2006];
 // // let fullAges = [];
 
@@ -70,7 +70,7 @@
 // //     console.log('Person with DOB: ' + yearsOfBirth[i] + ' is now ' + (2019 - yearsOfBirth[i]) + ' years old, and is of Full Age');
 // //   else
 // //     console.log('Person with DOB: ' + yearsOfBirth[i] + ' is now ' + (2019 - yearsOfBirth[i]) + ' years old, and is not of Full Age yet!')
-  
+
 // // }
 
 // // console.log(yearsOfBirth);
@@ -78,14 +78,14 @@
 
 // // function FirstFactorial(num) { 
 
-  
+
 // //   if (num > 1)
 // //     return num * FirstFactorial(num - 1)
 // //   else
 // //     return 1
-         
+
 // // }
-   
+
 // // // keep this function call here 
 // // console.log(FirstFactorial(6));   
 
@@ -225,7 +225,7 @@
 // //   var arrRes = [];
 
 // //   for (let index = 0; index < years.length; index++) {
-    
+
 // //     arrRes.push(fn(years[index]));
 
 // //   }
@@ -259,13 +259,13 @@
 // //       console.log('Hey ' + name + ', can you please explain what UX design means?')
 // //     }
 
-    
+
 // //   } else if (job === 'developer' ){
 
 // //     return function(name) {
 // //       console.log('Hey ' + name + ', can you please list out few features of JavaScript?')
 // //     }
-    
+
 // //   }
 // // }
 
@@ -292,23 +292,23 @@
 
 // // function interviewquestion(job) {
 // //     if (job === 'designer') {
-  
+
 // //       return function(name) {
 // //         console.log('Hey ' + name + ', can you please explain what UX design means?')
 // //       }
-  
-      
+
+
 // //     } else if (job === 'developer' ){
-  
+
 // //       return function(name) {
 // //         console.log('Hey ' + name + ', can you please list out few features of JavaScript?')
 // //       }
-      
+
 // //     }
 // //   }
-  
+
 // //   var developerQuestion = interviewquestion('developer');
-  
+
 // //   developerQuestion('Ganesh')
 
 // //CLossures
@@ -317,15 +317,15 @@
 
 
 //   //   return function(name) {
-      
+
 //   //     if (job === 'developer') {
 
 //   //       console.log('Hello ' + name + ', can you explain who is web developer?');
-        
+
 //   //     } else if (job === 'teacher') {
 
 //   //       console.log('Hello ' + name + ', what all subjects do you teach?');
-        
+
 //   //     } 
 //   //   }
 
@@ -345,11 +345,11 @@
 // //       if (style === 'formal') {
 
 // //         console.log('Good ' + timeOfDay + ' ladies and gentlemen, I\'m a ' + this.name + ',  I\'m ' + this.age + ' years old and I\'m a ' + this.job)
-        
+
 // //       } else if (style === 'friendly'){
 
 // //         console.log('Hey whats up? I\'m a ' + this.job + ', I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay)
-        
+
 // //       }
 // //     }
 // //   }
@@ -380,7 +380,7 @@
 
 // //   for (let index = 0; index < arr.length; index++) {
 // //     res.push(fn(arr[index]));
-    
+
 // //   }
 // //   return res;
 // // }
@@ -405,7 +405,7 @@
 //   this.questionString = questionString;
 //   this.answers = answers;
 //   this.correctAnswerIndex = correctAnswerIndex;
-  
+
 // };
 
 // Question.prototype.display = function() {
@@ -421,15 +421,15 @@
 // var q3 = new Question('How many moons does earth have?', ['0. One', '1. Seven', '2. Nine'], 0);
 
 // function random() {
-  
+
 //   var rand = Math.floor(Math.random() * 3);
 
 //   if (rand === 1) {
 
 //     return q1;
-    
+
 //   } else if (rand === 2) {
-    
+
 //     return q2;
 //   } else
 //     return q3;
@@ -551,7 +551,7 @@
 //   //   http.get('http://dummy.restapiexample.com/api/v1/employees', (res) => {
 //   //     resolve(res)
 //   //   })
-    
+
 //   // })
 //   http.get('http://dummy.restapiexample.com/api/v1/employees', (res) => {
 //       console.log(res)
@@ -696,7 +696,7 @@
 //     return accumulator + currentValue;
 //   }));
 // const Observable = require('rxjs')
- 
+
 // const numbers = Observable.interval(1000);
 
 // const subscription = numbers.subscribe(() => console.log("Done..."))
@@ -723,7 +723,7 @@
 
 //   })
 // }
- 
+
 
 // division(100, 10).then(val => console.log(val))
 // division(100, '10').then(val => console.log(val)).catch(err => {
@@ -761,7 +761,7 @@
 //   function second() {
 //     var c = "Bye";
 //     third();
-    
+
 //   }
 // }
 
@@ -905,10 +905,10 @@
 //   const totalAge = users.reduce((total, currentUser) => {
 //     console.log('current total:', total);
 //     console.log('currentUser:', currentUser);
-    
+
 //     // just for spacing
 //     console.log('\n');
-    
+
 //     return total + currentUser.age;
 //   }, 0);
 
@@ -1007,34 +1007,42 @@
 //     ({
 //         ...product,
 //         price: (product.price +  product.price * 0.15),
-        
+
 //     })
 // );
 
 // console.table(products$)
 
 
-console.log("I'm about to flip a coin!");
+// console.log("I'm about to flip a coin!");
 
-const flipACoin = new Promise((resolve, reject) => {
-  console.log("I'm flipping the coin!");
-  
-  const flipResult = flip(); //let's say flip() takes a few seconds
-  
-  if(flipResult) {
-    console.log("Here is the coin flip result!", flipResult);
-    resolve();
-  } else {
-    reject();
-  }
-}).then(() => {
-  console.log("I have flipped the coin.")
-}).catch(err => console.error(err));
+// const flipACoin = new Promise((resolve, reject) => {
+//   console.log("I'm flipping the coin!");
 
-console.log("I have flipped the coin.")
+//   const flipResult = flip(); //let's say flip() takes a few seconds
 
-function flip() {
-    setTimeout(() => {
-     return {}   
-    }, 2000);
-}
+//   if(flipResult) {
+//     console.log("Here is the coin flip result!", flipResult);
+//     resolve();
+//   } else {
+//     reject();
+//   }
+// }).then(() => {
+//   console.log("I have flipped the coin.")
+// }).catch(err => console.error(err));
+
+// console.log("I have flipped the coin.")
+
+// function flip() {
+//     setTimeout(() => {
+//      return {}   
+//     }, 2000);
+// }
+
+
+let input = 'hello world'
+
+console.log((input => {
+    if (input.length < 3) return 'INVALID'
+    return input.slice(1, input.length - 1);
+})(input))
