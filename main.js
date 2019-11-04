@@ -1045,4 +1045,7 @@ let input = 'hello world'
 console.log((input => {
     if (input.length < 3) return 'INVALID'
     return input.slice(1, input.length - 1);
-})(input))
+})(input));
+
+
+console.log(((someString) => someString.length > 2 ? someString.slice(1, -1) : undefined)(input))
