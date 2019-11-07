@@ -1051,26 +1051,44 @@
 // console.log(((someString) => someString.length > 2 ? someString.slice(1, -1) : undefined)(input))
 
 
-let yearsOfBirth = [1982, 1986, 1991, 1996, 2002];
+// let yearsOfBirth = [1982, 1986, 1991, 1996, 2002];
 
-function getAge(yearOfBirth) {
-    return 2019 - yearOfBirth;
-}
+// function getAge(yearOfBirth) {
+//     return 2019 - yearOfBirth;
+// }
 
-function eligibleForVoting(eligibiltyAgeLimit, age) {
-    return (age - eligibiltyAgeLimit) >= 0
-}
+// function eligibleForVoting(eligibiltyAgeLimit, age) {
+//     return (age - eligibiltyAgeLimit) >= 0
+// }
 
-function arrayCalc(inputArray, operatorFunction) {
-    var res = [];
-    inputArray.forEach(element => {
-        res.push(operatorFunction(element)) 
-    });
-    return res;
-}
+// function arrayCalc(inputArray, operatorFunction) {
+//     var res = [];
+//     inputArray.forEach(element => {
+//         res.push(operatorFunction(element)) 
+//     });
+//     return res;
+// }
 
-var ages = arrayCalc(yearsOfBirth, getAge);
+// var ages = arrayCalc(yearsOfBirth, getAge);
 
-var voitingEligibilityIndia = arrayCalc(ages, eligibleForVoting.bind(this, 18));
+// var voitingEligibilityIndia = arrayCalc(ages, eligibleForVoting.bind(this, 18));
 
-console.log(voitingEligibilityIndia)
+// console.log(voitingEligibilityIndia)
+
+
+let arr = [
+    { name: 'abc', value: 12},
+    { name: 'def', value: 4},
+    { name: 'ghi', value: 2},
+    { name: 'jkl', value: 5},
+    { name: 'mno', value: 1},
+    { name: 'pqr', value: 101}
+];
+
+
+let result = arr.reduce(function (r, a) {
+    if(a.value <= 5) r.push(a)
+    return r;
+}, []);
+
+console.log(result)
