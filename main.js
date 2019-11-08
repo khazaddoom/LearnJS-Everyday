@@ -1076,19 +1076,25 @@
 // console.log(voitingEligibilityIndia)
 
 
-let arr = [
-    { name: 'abc', value: 12},
-    { name: 'def', value: 4},
-    { name: 'ghi', value: 2},
-    { name: 'jkl', value: 5},
-    { name: 'mno', value: 1},
-    { name: 'pqr', value: 101}
-];
+// let arr = [
+//     { name: 'abc', value: 12},
+//     { name: 'def', value: 4},
+//     { name: 'ghi', value: 2},
+//     { name: 'jkl', value: 5},
+//     { name: 'mno', value: 1},
+//     { name: 'pqr', value: 101}
+// ];
 
 
-let result = arr.reduce(function (r, a) {
-    if(a.value <= 5) r.push(a)
-    return r;
-}, []);
+// let result = arr.reduce(function (r, a) {
+//     if(a.value <= 5) r.push(a)
+//     return r;
+// }, []);
 
-console.log(result)
+// console.log(result)
+
+
+const array = ['Ganesh', 'b', 'c'];
+array.forEach(function(elem, index, array) {
+    console.log(`${elem} is at position ${index} of [${array}]`);
+});
