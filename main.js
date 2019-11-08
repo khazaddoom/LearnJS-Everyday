@@ -1100,8 +1100,15 @@
 // });
 
 
-const array = ['a', 'Ganesh', 'c'];
-const names = [{ name: 'Ganesh'}, {name: 'Reshma'}]
-array.forEach(function(elem) {
-    console.log(this[0].name === elem)
-}, names);
+// const array = ['a', 'Ganesh', 'c'];
+// const names = [{ name: 'Ganesh'}, {name: 'Reshma'}]
+// array.forEach(function(elem) {
+//     console.log(this[0].name === elem)
+// }, names);
+
+let array = [1,2,3];
+newArray = array.map(function(elem) {
+    return elem * -1;
+});
+console.log(array);
+console.log(newArray); // [2,4,6]
