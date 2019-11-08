@@ -1094,7 +1094,14 @@
 // console.log(result)
 
 
-const array = ['Ganesh', 'b', 'c'];
-array.forEach(function(elem, index, array) {
-    console.log(`${elem} is at position ${index} of [${array}]`);
-});
+// const array = ['Ganesh', 'b', 'c'];
+// array.forEach(function(elem, index, array) {
+//     console.log(`${elem} is at position ${index} of [${array}]`);
+// });
+
+
+const array = ['a', 'Ganesh', 'c'];
+const names = [{ name: 'Ganesh'}, {name: 'Reshma'}]
+array.forEach(function(elem) {
+    console.log(this[0].name === elem)
+}, names);
