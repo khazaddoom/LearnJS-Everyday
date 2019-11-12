@@ -1116,7 +1116,7 @@
 function some(time) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(999)
+            reject(999)
         }, time);
     })
 }
@@ -1124,7 +1124,7 @@ function some(time) {
 
 async function somethingElse() {
     console.log('We are starting check...')
-    await some(2000)
+    const value = await some(2000)
     console.log('We are ending check!')
 }
 console.log('Program starts');
