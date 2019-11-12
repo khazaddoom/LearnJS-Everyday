@@ -1106,9 +1106,27 @@
 //     console.log(this[0].name === elem)
 // }, names);
 
-let array = [1,2,3];
-newArray = array.map(function(elem) {
-    return elem * -1;
-});
-console.log(array);
-console.log(newArray); // [2,4,6]
+// let array = [1,2,3];
+// newArray = array.map(function(elem) {
+//     return elem * -1;
+// });
+// console.log(array);
+// console.log(newArray); // [2,4,6]
+
+function some(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(999)
+        }, time);
+    })
+}
+
+
+async function somethingElse() {
+    console.log('We are starting check...')
+    await some(2000)
+    console.log('We are ending check!')
+}
+console.log('Program starts');
+somethingElse();
+console.log('Program ends!');
