@@ -1113,20 +1113,36 @@
 // console.log(array);
 // console.log(newArray); // [2,4,6]
 
-function some(time) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(999)
-        }, time);
-    })
-}
+// function some(time) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(999)
+//         }, time);
+//     })
+// }
 
 
-async function somethingElse() {
-    console.log('We are starting check...')
-    const value = await some(2000);
-    console.log('We are ending check!')
-}
-console.log('Program starts');
-somethingElse();
-console.log('Program ends!');
+// async function somethingElse() {
+//     console.log('We are starting check...')
+//     const value = await some(2000);
+//     console.log('We are ending check!')
+// }
+// console.log('Program starts');
+// somethingElse();
+// console.log('Program ends!');
+
+'use strict';
+
+
+const object1 = {};
+
+Object.defineProperty(object1, 'property1', {
+  value: 42,
+  writable: false
+});
+
+object1.property1 = 77;
+// throws an error in strict mode
+
+console.log(object1.property1);
+// expected output: 42
