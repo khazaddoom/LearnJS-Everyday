@@ -1131,18 +1131,64 @@
 // somethingElse();
 // console.log('Program ends!');
 
-'use strict';
+// 'use strict';
 
 
-const object1 = {};
+// const object1 = {};
 
-Object.defineProperty(object1, 'property1', {
-  value: 42,
-  writable: false
-});
+// Object.defineProperty(object1, 'property1', {
+//   value: 42,
+//   writable: false
+// });
 
-object1.property1 = 77;
-// throws an error in strict mode
+// object1.property1 = 77;
+// // throws an error in strict mode
 
-console.log(object1.property1);
-// expected output: 42
+// console.log(object1.property1);
+// // expected output: 42
+
+
+let state = {};
+
+
+function reducer(state, action) {
+  switch (action.type) {
+    
+    case 'LOAD':
+      state = {
+        ...state
+      }
+
+    case 'TOGGLE_PRODUCT_CODE':
+      state =  {
+        ...state, showProductCode: action.payLoad
+      }
+  
+    default:
+      break;
+  }
+}
+
+function loadValues() {
+  reducer(state, {
+    type: 'LOAD',
+    payLoad: {
+      currentProduct: {},
+      productsList: []
+    }
+  })
+}
+
+function changeProductCode(toggleTo) {
+  reducer(state, {
+    type: 'TOGGLE_PRODUCT_CODE',
+    payLoad: {
+      showProductCode: toggleTo
+    }
+  })
+}
+
+
+changeProductCode(false)
+
+console.log(state)
