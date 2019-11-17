@@ -1154,15 +1154,11 @@ let state = {};
 function reducer(state, action) {
   switch (action.type) {
     
-    case 'LOAD':
-      state = {
-        ...state
-      }
-
     case 'TOGGLE_PRODUCT_CODE':
       state =  {
         ...state, showProductCode: action.payLoad
       }
+      return state;
   
     default:
       break;
@@ -1171,7 +1167,7 @@ function reducer(state, action) {
 
 function loadValues() {
   reducer(state, {
-    type: 'LOAD',
+    type: 'TOGGLE_PRODUCT_CODE',
     payLoad: {
       currentProduct: {},
       productsList: []
