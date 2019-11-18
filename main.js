@@ -1,3 +1,4 @@
+
 // // var john = {
 // //     name: 'John',
 // //     yearOfBirth: 1986,
@@ -1148,47 +1149,56 @@
 // // expected output: 42
 
 
-let state = {};
+// let state = {};
 
 
-function reducer(state, action) {
-  switch (action.type) {
+// function reducer(state, action) {
+//   switch (action.type) {
     
-    case 'LOAD':
-      state = {
-        ...state
-      }
+//     case 'LOAD':
+//       state = {
+//         ...state
+//       }
 
-    case 'TOGGLE_PRODUCT_CODE':
-      state =  {
-        ...state, showProductCode: action.payLoad
-      }
+//     case 'TOGGLE_PRODUCT_CODE':
+//       state =  {
+//         ...state, showProductCode: action.payLoad
+//       }
   
-    default:
-      break;
-  }
-}
+//     default:
+//       break;
+//   }
+// }
 
-function loadValues() {
-  reducer(state, {
-    type: 'LOAD',
-    payLoad: {
-      currentProduct: {},
-      productsList: []
-    }
-  })
-}
+// function loadValues() {
+//   reducer(state, {
+//     type: 'LOAD',
+//     payLoad: {
+//       currentProduct: {},
+//       productsList: []
+//     }
+//   })
+// }
 
-function changeProductCode(toggleTo) {
-  reducer(state, {
-    type: 'TOGGLE_PRODUCT_CODE',
-    payLoad: {
-      showProductCode: toggleTo
-    }
-  })
-}
+// function changeProductCode(toggleTo) {
+//   reducer(state, {
+//     type: 'TOGGLE_PRODUCT_CODE',
+//     payLoad: {
+//       showProductCode: toggleTo
+//     }
+//   })
+// }
 
 
-changeProductCode(false)
+// changeProductCode(false)
 
-console.log(state)
+// console.log(state)
+
+
+let newObj = {};
+
+Object.assign(newObj, {
+  name: 'Ganesh S Acahrya'
+})
+
+console.log(newObj)
