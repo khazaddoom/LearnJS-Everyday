@@ -1198,11 +1198,16 @@
 
 // console.log(newObj)
 
+const rxjs = require('rxjs')
+
+rxjs.interval(1000)
+    .subscribe(console.warn)
+
 
 const some = async (value) => {
-  return `Hello ${value}, welcome!`
-}
+  return `Hello ${value}, welcome!`;
+};
 
-some('Reshma').then(console.log)
+some('Reshma').then(console.log);
 
-console.log('I came first...')
+console.log('I came first...');
