@@ -1190,10 +1190,19 @@
 
 // console.log(state)
 
-let newObj = {};
+// let newObj = {};
 
-Object.assign(newObj, {
-  name: 'Ganesh S Acahrya'
-})
+// Object.assign(newObj, {
+//   name: 'Ganesh S Acahrya'
+// })
 
-console.log(newObj)
+// console.log(newObj)
+
+
+const some = async (value) => {
+  return `Hello ${value}, welcome!`
+}
+
+some('Reshma').then(console.log)
+
+console.log('I came first...')
