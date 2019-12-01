@@ -1190,10 +1190,31 @@
 
 // console.log(state)
 
-let newObj = {};
+// let newObj = {};
 
-Object.assign(newObj, {
-  name: 'Ganesh S Acahrya'
-})
+// Object.assign(newObj, {
+//   name: 'Ganesh S Acahrya'
+// })
 
-console.log(newObj)
+// console.log(newObj)
+
+const rxjs = require('rxjs');
+const takeUntil = require('rxjs/Operators/takeUntil');
+
+// rxjs.interval(1000)
+//     .subscribe(console.warn)
+
+
+// const some = async (value) => {
+//   return `Hello ${value}, welcome!`;
+// };
+
+// some('Reshma').then(console.log);
+
+// console.log('I came first...');
+
+const interval = rxjs.interval(500);
+const timer = rxjs.timer(2000);
+
+interval.pipe(takeUntil(timer))
+  .subscribe(val => console.log(val));
