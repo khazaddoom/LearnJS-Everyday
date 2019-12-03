@@ -1198,8 +1198,8 @@
 
 // console.log(newObj)
 
-const rxjs = require('rxjs');
-const takeUntil = require('rxjs/Operators/takeUntil');
+// const rxjs = require('rxjs');
+// const takeUntil = require('rxjs/Operators/takeUntil');
 
 // rxjs.interval(1000)
 //     .subscribe(console.warn)
@@ -1213,8 +1213,20 @@ const takeUntil = require('rxjs/Operators/takeUntil');
 
 // console.log('I came first...');
 
-const interval = rxjs.interval(500);
-const timer = rxjs.timer(2000);
+// const interval = rxjs.interval(500);
+// const timer = rxjs.timer(2000);
 
-interval.pipe(takeUntil(timer))
-  .subscribe(val => console.log(val));
+// interval.pipe(takeUntil(timer))
+//   .subscribe(val => console.log(val));
+
+
+let state = {
+  selectedTasks: [{ task: 1}, {task: 2}] 
+}
+
+state = {
+  ...state,
+  selectedTasks: {task: 100}
+}
+
+console.log(state)
