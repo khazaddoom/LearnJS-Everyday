@@ -1220,13 +1220,19 @@
 //   .subscribe(val => console.log(val));
 
 
-let state = {
-  selectedTasks: [{ task: 1}, {task: 2}] 
-}
+// let state = {
+//   selectedTasks: [{ task: 1}, {task: 2}] 
+// }
 
-state = {
-  ...state,
-  selectedTasks: {task: 100}
-}
+// state = {
+//   ...state,
+//   selectedTasks: {task: 100}
+// }
 
-console.log(state)
+// console.log(state)
+
+setTimeout(() => {
+  console.log('Hello from timeout block');
+}, 0);
+
+Promise.resolve('Hello from Promise resolve').then(console.log);
