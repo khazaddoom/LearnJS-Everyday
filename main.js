@@ -1235,13 +1235,13 @@ const log = (value) => console.log(`${value}:\n Elapsed time: ${Date.now() - tic
 
 let codeBlocker = () => {
 
-  return new Promise((resolve, reject) => {
-     let i = 0;
-    while(i< 1000000) {i++;}
-
-    resolve ('Billion loops done!');
-  })
- 
+  return Promise.resolve().then( _ => {
+    
+    let i = 0;
+    while(i< 1000000000) {i++;} 
+    
+    return 'Billion loops done!';
+  });
 
 }
 
