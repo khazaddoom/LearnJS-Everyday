@@ -1234,10 +1234,14 @@ const tick = Date.now();
 const log = (value) => console.log(`${value}:\n Elapsed time: ${Date.now() - tick}ms`);
 
 let codeBlocker = () => {
-  let i = 0;
-  while(i< 1000000) {i++;}
 
-  return 'Billion loops done!'
+  return new Promise((resolve, reject) => {
+     let i = 0;
+    while(i< 1000000) {i++;}
+
+    resolve ('Billion loops done!');
+  })
+ 
 
 }
 
@@ -1245,7 +1249,7 @@ let codeBlocker = () => {
 
 log('Synchronous 1');
 
-log(codeBlocker());
+codeBlocker().then(log);
 
 log('Synchronous 2');
 
