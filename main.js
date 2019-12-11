@@ -1230,9 +1230,38 @@
 // }
 
 // console.log(state)
+const tick = Date.now();
+const log = (value) => console.log(`${value}:\n Elapsed time: ${Date.now() - tick}ms`);
 
-setTimeout(() => {
-  console.log('Hello from timeout block');
-}, 0);
+let codeBlocker = () => {
+  let i = 0;
+  while(i< 1000000) {i++;}
 
-Promise.resolve('Hello from Promise resolve').then(console.log);
+  return 'Billion loops done!'
+
+}
+
+
+
+log('Synchronous 1');
+
+log(codeBlocker());
+
+log('Synchronous 2');
+
+// const myFun = (value) => {
+//   return new Promise((resolve, reject) => {
+//     resolve('Hello from Promise Resolve');
+//   });
+// }
+
+
+// setTimeout(() => {
+//   console.log('Hello from timeout block');
+// }, 0);
+
+
+
+
+// Promise.resolve('Hello from Promise resolve').then(console.log);
+
