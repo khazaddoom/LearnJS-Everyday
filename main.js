@@ -1230,28 +1230,28 @@
 // }
 
 // console.log(state)
-const tick = Date.now();
-const log = (value) => console.log(`${value}:\n Elapsed time: ${Date.now() - tick}ms`);
+// const tick = Date.now();
+// const log = (value) => console.log(`${value}:\n Elapsed time: ${Date.now() - tick}ms`);
 
-let codeBlocker = () => {
+// let codeBlocker = () => {
 
-  return Promise.resolve().then( _ => {
+//   return Promise.resolve().then( _ => {
     
-    let i = 0;
-    while(i< 1000000000) {i++;} 
+//     let i = 0;
+//     while(i< 1000000000) {i++;} 
     
-    return 'Billion loops done!';
-  });
+//     return 'Billion loops done!';
+//   });
 
-}
+// }
 
 
 
-log('Synchronous 1');
+// log('Synchronous 1');
 
-codeBlocker().then(log);
+// codeBlocker().then(log);
 
-log('Synchronous 2');
+// log('Synchronous 2');
 
 // const myFun = (value) => {
 //   return new Promise((resolve, reject) => {
@@ -1268,4 +1268,18 @@ log('Synchronous 2');
 
 
 // Promise.resolve('Hello from Promise resolve').then(console.log);
+
+
+let users = [
+  { name: 'Ganesh'},
+  { name: 'Reshma'},
+];
+
+let userNames = users.map(item => Object.assign({}, item))
+
+userNames[1].name = 'Reshma Kumari'
+
+console.log(users);
+
+console.log(userNames);
 
