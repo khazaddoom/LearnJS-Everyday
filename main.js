@@ -1273,13 +1273,18 @@
 let users = [
   { name: 'Ganesh'},
   { name: 'Reshma'},
+  {name: 'Pradeep'}
 ];
 
-let userNames = users.map(item => Object.assign({}, item))
+// let userNames = users.map(item => Object.assign({}, item))
 
-userNames[1].name = 'Reshma Kumari'
+// userNames[1].name = 'Reshma Kumari'
 
-console.log(users);
+// console.log(users);
 
-console.log(userNames);
+// console.log(userNames);
 
+
+const [first, second, ...third] = users;
+
+console.log(third)
