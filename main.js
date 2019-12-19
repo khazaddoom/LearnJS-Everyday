@@ -1270,11 +1270,11 @@
 // Promise.resolve('Hello from Promise resolve').then(console.log);
 
 
-let users = [
-  { name: 'Ganesh'},
-  { name: 'Reshma'},
-  {name: 'Pradeep'}
-];
+// let users = [
+//   { name: 'Ganesh'},
+//   { name: 'Reshma'},
+//   {name: 'Pradeep'}
+// ];
 
 // let userNames = users.map(item => Object.assign({}, item))
 
@@ -1285,6 +1285,12 @@ let users = [
 // console.log(userNames);
 
 
-const [first, second, ...third] = users;
+// const [first, second, ...third] = users;
 
-console.log(third)
+// console.log(third)
+
+let moment = require('moment')
+
+let matchDate = Date.now();
+console.log(moment(matchDate).locale('ar_SA').format('DD-MM-YYYY'))
+console.log(moment(matchDate).locale('en_GB').format('DD-MM-YYYY'))
