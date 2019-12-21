@@ -1296,7 +1296,7 @@ io.on('connection', function(socket) {
   console.log("Connected to #", socket.id)
 
   socket.on('test', function(data) {
-    console.log(data)
+    console.table({client: socket.id, ...data})
   })
 
 });
