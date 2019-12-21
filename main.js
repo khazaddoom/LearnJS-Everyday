@@ -1270,21 +1270,29 @@
 // Promise.resolve('Hello from Promise resolve').then(console.log);
 
 
-let users = [
-  { name: 'Ganesh'},
-  { name: 'Reshma'},
-  {name: 'Pradeep'}
-];
+// let users = [
+//   { name: 'Ganesh'},
+//   { name: 'Reshma'},
+//   {name: 'Pradeep'}
+// ];
 
-// let userNames = users.map(item => Object.assign({}, item))
+// // let userNames = users.map(item => Object.assign({}, item))
 
-// userNames[1].name = 'Reshma Kumari'
+// // userNames[1].name = 'Reshma Kumari'
 
-// console.log(users);
+// // console.log(users);
 
-// console.log(userNames);
+// // console.log(userNames);
 
 
-const [first, second, ...third] = users;
+// const [first, second, ...third] = users;
 
-console.log(third)
+// console.log(third)
+
+const express = require('express');
+
+const app = express();
+
+app.use(express.static('public'))
+
+app.listen(3000, () => console.log('Server Running in Port 3000...'))
