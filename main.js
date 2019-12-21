@@ -1275,6 +1275,7 @@
 //   { name: 'Reshma'},
 //   {name: 'Pradeep'}
 // ];
+<<<<<<< HEAD
 
 // // let userNames = users.map(item => Object.assign({}, item))
 
@@ -1283,6 +1284,8 @@
 // // console.log(users);
 
 // // console.log(userNames);
+=======
+>>>>>>> bf014dd52d6888a9ac335bacb703a6d8e640770b
 
 
 // const [first, second, ...third] = users;
