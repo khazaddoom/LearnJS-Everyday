@@ -1275,17 +1275,6 @@
 //   { name: 'Reshma'},
 //   {name: 'Pradeep'}
 // ];
-<<<<<<< HEAD
-
-// // let userNames = users.map(item => Object.assign({}, item))
-
-// // userNames[1].name = 'Reshma Kumari'
-
-// // console.log(users);
-
-// // console.log(userNames);
-=======
->>>>>>> bf014dd52d6888a9ac335bacb703a6d8e640770b
 
 
 // const [first, second, ...third] = users;
@@ -1293,9 +1282,21 @@
 // console.log(third)
 
 const express = require('express');
+const socket = require('socket.io');
 
 const app = express();
 
 app.use(express.static('public'));
 
-app.listen(3000, () => console.log('Server Running in Port 3000...'))
+const server = app.listen(3000, () => console.log('Server Running in Port 3000...'));
+
+let io = socket(server);
+
+io.on('connection', function(socket) {
+  console.log("Connected to #", socket.id)
+
+  socket.on('test', function(data) {
+    console.log(data)
+  })
+
+});
