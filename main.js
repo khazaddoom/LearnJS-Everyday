@@ -1302,15 +1302,29 @@
 // });
 
 
-let fruits = {
-  'mango': '🥭' ,
-  'apple': '🍎' ,
-  'peach': '🍑'
-};
+// let fruits = {
+//   'mango': '🥭' ,
+//   'apple': '🍎' ,
+//   'peach': '🍑'
+// };
 
 
-const getFruit = (name) => {
-  return fruits[name]
+// const getFruit = (name) => {
+//   return fruits[name]
+// }
+
+let data = {
+  "payload": [
+    {id: 100, name: 'adasdas'},
+    {id: 200, name: 'cvbcvb'},
+    {id: 300, name: 'werwerw'},
+    {id: 400, name: 'fghfgh'}
+  ]
 }
 
+let t = data['payload']
+
+let k = []
+
+console.log(typeof k)
 
