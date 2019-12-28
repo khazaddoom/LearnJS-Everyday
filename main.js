@@ -1281,22 +1281,36 @@
 
 // console.log(third)
 
-const express = require('express');
-const socket = require('socket.io');
+// const express = require('express');
+// const socket = require('socket.io');
 
-const app = express();
+// const app = express();
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
-const server = app.listen(3000, () => console.log('Server Running in Port 3000...'));
+// const server = app.listen(3000, () => console.log('Server Running in Port 3000...'));
 
-let io = socket(server);
+// let io = socket(server);
 
-io.on('connection', function(socket) {
-  console.log("Connected to #", socket.id)
+// io.on('connection', function(socket) {
+//   console.log("Connected to #", socket.id)
 
-  socket.on('test', function(data) {
-    console.table({client: socket.id, ...data})
-  })
+//   socket.on('test', function(data) {
+//     console.table({client: socket.id, ...data})
+//   })
 
-});
+// });
+
+
+let fruits = {
+  'mango': '🥭' ,
+  'apple': '🍎' ,
+  'peach': '🍑'
+};
+
+
+const getFruit = (name) => {
+  return fruits[name]
+}
+
+
