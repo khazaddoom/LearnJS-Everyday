@@ -1281,22 +1281,53 @@
 
 // console.log(third)
 
-const express = require('express');
-const socket = require('socket.io');
+// const express = require('express');
+// const socket = require('socket.io');
 
-const app = express();
+// const app = express();
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
-const server = app.listen(3000, () => console.log('Server Running in Port 3000...'));
+// const server = app.listen(3000, () => console.log('Server Running in Port 3000...'));
 
-let io = socket(server);
+// let io = socket(server);
 
-io.on('connection', function(socket) {
-  console.log("Connected to #", socket.id)
+// io.on('connection', function(socket) {
+//   console.log("Connected to #", socket.id)
 
-  socket.on('test', function(data) {
-    console.table({client: socket.id, ...data})
-  })
+//   socket.on('test', function(data) {
+//     console.table({client: socket.id, ...data})
+//   })
 
-});
+// });
+
+
+const moment = require('moment-timezone');
+
+// moment.tz.setDefault('US/Central')
+
+let input = "Sun Dec 22 23:39:00 +0000 2019";
+
+// let dateObj = moment(new Date(input)).tz('US/Central');
+
+// let currentDate = moment(new Date('December 23, 2019 10:00:00')).tz('US/Central');
+
+// console.log('Current Date: ', currentDate.format())
+// console.log('Published Date: ', dateObj.format())
+
+// console.log(dateObj.from(currentDate))
+
+let time = moment(input);
+
+console.log(time)
+
+let str = time.fromNow();
+
+console.log(str)
+
+let number = parseInt(str);
+
+console.log(number)
+
+
+
