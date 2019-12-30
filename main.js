@@ -1154,13 +1154,13 @@
 
 // function reducer(state, action) {
 //   switch (action.type) {
-    
+
 //     case 'TOGGLE_PRODUCT_CODE':
 //       state =  {
 //         ...state, showProductCode: action.payLoad
 //       }
 //       return state;
-  
+
 //     default:
 //       break;
 //   }
@@ -1236,10 +1236,10 @@
 // let codeBlocker = () => {
 
 //   return Promise.resolve().then( _ => {
-    
+
 //     let i = 0;
 //     while(i< 1000000000) {i++;} 
-    
+
 //     return 'Billion loops done!';
 //   });
 
@@ -1302,6 +1302,32 @@
 // });
 
 
+// let fruits = {
+//   'mango': '🥭' ,
+//   'apple': '🍎' ,
+//   'peach': '🍑'
+// };
+
+
+// const getFruit = (name) => {
+//   return fruits[name]
+// }
+
+// let data = {
+//     "payload": [
+//         { id: 100, name: 'adasdas' },
+//         { id: 200, name: 'cvbcvb' },
+//         { id: 300, name: 'werwerw' },
+//         { id: 400, name: 'fghfgh' }
+//     ]
+// }
+
+// let t = data['payload']
+
+// let k = []
+
+// console.log(typeof k)
+
 const moment = require('moment-timezone');
 
 // moment.tz.setDefault('US/Central')
@@ -1316,18 +1342,5 @@ let input = "Sun Dec 22 23:39:00 +0000 2019";
 // console.log('Published Date: ', dateObj.format())
 
 // console.log(dateObj.from(currentDate))
-
-let time = moment(input);
-
-console.log(time)
-
-let str = time.fromNow();
-
-console.log(str)
-
-let number = parseInt(str);
-
-console.log(number)
-
 
 
