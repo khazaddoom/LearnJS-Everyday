@@ -1328,11 +1328,11 @@
 
 // console.log(typeof k)
 
-const moment = require('moment-timezone');
+// const moment = require('moment-timezone');
 
-// moment.tz.setDefault('US/Central')
+// // moment.tz.setDefault('US/Central')
 
-let input = "Sun Dec 22 23:39:00 +0000 2019";
+// let input = "Sun Dec 22 23:39:00 +0000 2019";
 
 // let dateObj = moment(new Date(input)).tz('US/Central');
 
@@ -1343,4 +1343,17 @@ let input = "Sun Dec 22 23:39:00 +0000 2019";
 
 // console.log(dateObj.from(currentDate))
 
+
+const  EventEmitter = require('events');
+const eventEmitter = new EventEmitter();
+
+eventEmitter.on('myEvent', () => {
+    console.log('Listener 1');
+});
+
+eventEmitter.emit('myEvent');
+
+let test = eventEmitter.on("myEvent", () => {
+    console.log("Listener 2");
+});
 
