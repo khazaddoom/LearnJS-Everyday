@@ -1344,16 +1344,21 @@
 // console.log(dateObj.from(currentDate))
 
 
-const  EventEmitter = require('events');
-const eventEmitter = new EventEmitter();
+// const  EventEmitter = require('events');
+// const eventEmitter = new EventEmitter();
 
-eventEmitter.on('myEvent', () => {
-    console.log('Listener 1');
-});
+// eventEmitter.on('myEvent', () => {
+//     console.log('Listener 1');
+// });
 
-eventEmitter.emit('myEvent');
+// eventEmitter.emit('myEvent');
 
-let test = eventEmitter.on("myEvent", () => {
-    console.log("Listener 2");
-});
+// let test = eventEmitter.on("myEvent", () => {
+//     console.log("Listener 2");
+// });
 
+
+const colors =  require('colors/safe')
+
+console.log(colors.red('colorizing terminal with colors.js can be fun'))
+console.log(colors.green('colors make the terminal lively.'))
