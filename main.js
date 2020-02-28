@@ -1358,7 +1358,28 @@
 // });
 
 
-const colors =  require('colors/safe')
+// const colors =  require('colors/safe')
 
-console.log(colors.red('colorizing terminal with colors.js can be fun'))
-console.log(colors.green('colors make the terminal lively.'))
+// console.log(colors.red('colorizing terminal with colors.js can be fun'))
+// console.log(colors.green('colors make the terminal lively.'))
+
+function createFrog(name) {
+
+    const children = [];   
+  
+    return {
+  
+      addChild(frog) {
+  
+        children.push(frog)
+  
+      },
+  
+    }
+  
+  } 
+  
+  const mikeTheFrog = createFrog('mike');
+
+  console.log(mikeTheFrog)
+  
