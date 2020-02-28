@@ -1363,23 +1363,47 @@
 // console.log(colors.red('colorizing terminal with colors.js can be fun'))
 // console.log(colors.green('colors make the terminal lively.'))
 
-function createFrog(name) {
+// function createFrog(name) {
 
-    const children = [];   
+//     const children = [];   
   
-    return {
+//     return {
   
-      addChild(frog) {
+//       addChild(frog) {
   
-        children.push(frog)
+//         children.push(frog)
   
-      },
+//       },
   
-    }
+//     }
   
-  } 
+//   } 
   
-  const mikeTheFrog = createFrog('mike');
+//   const mikeTheFrog = createFrog('mike');
 
-  console.log(mikeTheFrog)
+//   console.log(mikeTheFrog);
+
+
+function frog(name, color) {
+    this.name = name;
+    this.color = color;
+}
+
+let a = new frog('abc', 'RED');
+let b = new frog('xyz', 'GREEN');
+
+console.log(a);
+
+console.log(b);
+
+frog.prototype.jump = function(feet) {
+    console.log(`Frog named ${this.name} can jump upto ${feet}`);
+}
+
+a.jump(100);
+
+b.jump(50);
+// object of this code above is to understand the use of prototype over adding method directly to a constructor or class
+// which makes duplicate copies of the same method but the method no matter what is exactly same and only varies by its input
+
   
