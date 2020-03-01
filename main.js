@@ -1407,12 +1407,16 @@
 // which makes duplicate copies of the same method but the method no matter what is exactly same and only varies by its input
 
 
-function sayHi() {
-    console.log(age);
-    console.log(name);
-    var age = 12;
-    let name = "Greeshma";
-}
+// function sayHi() {
+//     console.log(age);
+//     console.log(name);
+//     var age = 12;
+//     let name = "Greeshma";
+// }
 
-sayHi();
+// sayHi();
+
+
+console.log(t);
+let t = 12;
   
