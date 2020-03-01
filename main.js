@@ -1384,26 +1384,35 @@
 //   console.log(mikeTheFrog);
 
 
-function frog(name, color) {
-    this.name = name;
-    this.color = color;
-}
+// function frog(name, color) {
+//     this.name = name;
+//     this.color = color;
+// }
 
-let a = new frog('abc', 'RED');
-let b = new frog('xyz', 'GREEN');
+// let a = new frog('abc', 'RED');
+// let b = new frog('xyz', 'GREEN');
 
-console.log(a);
+// console.log(a);
 
-console.log(b);
+// console.log(b);
 
-frog.prototype.jump = function(feet) {
-    console.log(`Frog named ${this.name} can jump upto ${feet}`);
-}
+// frog.prototype.jump = function(feet) {
+//     console.log(`Frog named ${this.name} can jump upto ${feet}`);
+// }
 
-a.jump(100);
+// a.jump(100);
 
-b.jump(50);
+// b.jump(50);
 // object of this code above is to understand the use of prototype over adding method directly to a constructor or class
 // which makes duplicate copies of the same method but the method no matter what is exactly same and only varies by its input
 
+
+function sayHi() {
+    console.log(age);
+    console.log(name);
+    var age = 12;
+    let name = "Greeshma";
+}
+
+sayHi();
   
