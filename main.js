@@ -1417,6 +1417,27 @@
 // sayHi();
 
 
-console.log(t);
-let t = 12;
+// console.log(t);
+// let t = 12;
+
+
+const hello = (name) => {
+    console.log(this.name)
+}
   
+
+hello('asdasd');
+
+class Hello {
+    constructor(name) {
+        this.name = name;
+    }
+
+    sayHello() {
+        console.log(`${this.name} says hello...`)
+    }
+}
+
+
+let a = new Hello('ganesh');
+a.sayHello();
