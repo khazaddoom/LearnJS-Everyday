@@ -1442,12 +1442,29 @@
 // let a = new Hello('ganesh');
 // a.sayHello();
 
-const prom = new Promise((res, rej) => {
-  console.log('first');
-  res();
-  console.log('second');
+// let prom = new Promise((res, rej) => {
+//   console.log('first');
+//   res();
+//   console.log('second');
+// });
+// prom.then(() => {
+//   console.log('third');
+// });
+// console.log('fourth');
+
+// ************************ //
+
+prom = new Promise((res, rej) => {
+  res('1');
+  rej('error');
+  res('2');
+  console.log('sync')
 });
-prom.then(() => {
-  console.log('third');
-});
-console.log('fourth');
+
+prom
+  .then(res => {
+    console.log('then: ', res);
+  })
+  .catch(err => {
+    console.log('catch: ', err);
+  });
