@@ -1421,23 +1421,33 @@
 // let t = 12;
 
 
-const hello = (name) => {
-    console.log(this.name)
-}
+// const hello = (name) => {
+//     console.log(this.name)
+// }
   
 
-hello('asdasd');
+// hello('asdasd');
 
-class Hello {
-    constructor(name) {
-        this.name = name;
-    }
+// class Hello {
+//     constructor(name) {
+//         this.name = name;
+//     }
 
-    sayHello() {
-        console.log(`${this.name} says hello...`)
-    }
-}
+//     sayHello() {
+//         console.log(`${this.name} says hello...`)
+//     }
+// }
 
 
-let a = new Hello('ganesh');
-a.sayHello();
+// let a = new Hello('ganesh');
+// a.sayHello();
+
+const prom = new Promise((res, rej) => {
+  console.log('first');
+  res();
+  console.log('second');
+});
+prom.then(() => {
+  console.log('third');
+});
+console.log('fourth');
