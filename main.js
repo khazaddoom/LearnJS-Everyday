@@ -1454,17 +1454,21 @@
 
 // ************************ //
 
-prom = new Promise((res, rej) => {
-  res('1');
-  rej('error');
-  res('2');
-  console.log('sync')
-});
+// prom = new Promise((res, rej) => {
+//   res('1');
+//   rej('error');
+//   res('2');
+//   console.log('sync')
+// });
 
-prom
-  .then(res => {
-    console.log('then: ', res);
-  })
-  .catch(err => {
-    console.log('catch: ', err);
-  });
+// prom
+//   .then(res => {
+//     console.log('then: ', res);
+//   })
+//   .catch(err => {
+//     console.log('catch: ', err);
+//   });
+
+const { AuthServerInstance } = require('./auth.js');
+
+console.log(AuthServerInstance.isAuthenticated());
