@@ -1498,14 +1498,20 @@ async function asyncForEach(array, callback) {
     }
 }
 
-const start = async () => {
-    await asyncForEach([1, 2, 3], async (num) => {
-      await waitFor(1000);
-      console.log(num);
-    });
-    console.log('Done');
-  }
-  start();
+// const start = async () => {
+//     await asyncForEach([1, 2, 3], async (num) => {
+//       await waitFor(1000);
+//       console.log(num);
+//     });
+//     console.log('Done');
+//   }
+//   start();
+
+[1, 2, 3].forEach(async (num) => {
+    await waitFor(50)
+    console.log(num)
+ })
+
 
 
 console.log('Done');
