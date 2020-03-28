@@ -1469,6 +1469,27 @@
 //     console.log('catch: ', err);
 //   });
 
-const { AuthServerInstance } = require('./auth.js');
+// const { AuthServerInstance } = require('./auth.js');
 
-console.log(AuthServerInstance.isAuthenticated());
+// console.log(AuthServerInstance.isAuthenticated());
+
+const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
+
+
+// [1, 2, 3].forEach(async (num) => {
+//   await waitFor(50);
+//   console.log(num);
+// });
+
+async function asyncForEach(arr, callback) {
+    for(let index=0; index < arr.length; index++) {
+        await callback(arr[index], index, arr);
+        console.log(arr[index]);
+    }
+}
+
+
+asyncForEach([1, 2, 3], waitFor.bind(null, 50));
+
+
+console.log('Done');
