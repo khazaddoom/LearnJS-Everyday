@@ -1481,15 +1481,31 @@ const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
 //   console.log(num);
 // });
 
-async function asyncForEach(arr, callback) {
-    for(let index=0; index < arr.length; index++) {
-        await callback(arr[index], index, arr);
-        console.log(arr[index]);
+// async function asyncForEach(arr, callback) {
+//     for(let index=0; index < arr.length; index++) {
+//         await callback(arr[index], index, arr);
+//         console.log(arr[index]);
+//     }
+// }
+
+
+// asyncForEach([1, 2, 3], waitFor.bind(null, 50));
+
+
+async function asyncForEach(array, callback) {
+    for (let index = 0; index < array.length; index++) {
+        await callback(array[index], index, array);
     }
 }
 
-
-asyncForEach([1, 2, 3], waitFor.bind(null, 50));
+const start = async () => {
+    await asyncForEach([1, 2, 3], async (num) => {
+      await waitFor(1000);
+      console.log(num);
+    });
+    console.log('Done');
+  }
+  start();
 
 
 console.log('Done');
