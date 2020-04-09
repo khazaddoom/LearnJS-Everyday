@@ -1473,7 +1473,7 @@
 
 // console.log(AuthServerInstance.isAuthenticated());
 
-const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
+// const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
 
 
 // [1, 2, 3].forEach(async (num) => {
@@ -1492,11 +1492,11 @@ const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
 // asyncForEach([1, 2, 3], waitFor.bind(null, 50));
 
 
-async function asyncForEach(array, callback) {
-    for (let index = 0; index < array.length; index++) {
-        await callback(array[index], index, array);
-    }
-}
+// async function asyncForEach(array, callback) {
+//     for (let index = 0; index < array.length; index++) {
+//         await callback(array[index], index, array);
+//     }
+// }
 
 // const start = async () => {
 //     await asyncForEach([1, 2, 3], async (num) => {
@@ -1507,11 +1507,25 @@ async function asyncForEach(array, callback) {
 //   }
 //   start();
 
-[1, 2, 3].forEach(async (num) => {
-    await waitFor(50)
-    console.log(num)
- })
+// [1, 2, 3].forEach(async (num) => {
+//     await waitFor(50)
+//     console.log(num)
+//  })
 
 
 
-console.log('Done');
+// console.log('Done');
+
+const arr = ['a', 'b', 'c', 'd', 'e'];
+for (let a of arr) {
+  console.log(a)
+}
+
+const person = {
+    name: 'ganesh',
+    age: 33
+}
+
+for (let a in person) {
+    console.log(a)
+}
