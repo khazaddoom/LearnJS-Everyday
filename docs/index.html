@@ -8,18 +8,25 @@
     <title>Learning JavaScript - Vanilla</title>
 </head>
 <body>
+
+    <button id="share">Share</button>
+
     <script>
-        if (navigator.share) { 
-            navigator.share({
-                title: 'WebShare API Demo',
-                url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
-            }).then(() => {
-                console.log('Thanks for sharing!');
-            })
-            .catch(console.error);
-            } else {
-            console.error('Share not available!')
-        }
+
+        document.getElementById('share').addEventListener('click', function(e) {
+            if (navigator.share) { 
+                navigator.share({
+                    title: 'WebShare API Demo',
+                    url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                })
+                .catch(console.error);
+                } else {
+                alert('Share not available!')
+                }
+        });
+        
     </script>
 </body>
 </html>
