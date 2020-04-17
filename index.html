@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        const webWorker = new Worker('worker.js');
-
-        webWorker.onmessage = function (event) {
-            alert("Completed " + event.data + "iterations" );
-        };
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>

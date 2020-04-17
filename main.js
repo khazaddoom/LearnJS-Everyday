@@ -1516,16 +1516,28 @@
 
 // console.log('Done');
 
-const arr = ['a', 'b', 'c', 'd', 'e'];
-for (let a of arr) {
-  console.log(a)
-}
+// const arr = ['a', 'b', 'c', 'd', 'e'];
+// for (let a of arr) {
+//   console.log(a)
+// }
 
-const person = {
-    name: 'ganesh',
-    age: 33
-}
+// const person = {
+//     name: 'ganesh',
+//     age: 33
+// }
 
-for (let a in person) {
-    console.log(a)
+// for (let a in person) {
+//     console.log(a)
+// }
+
+if (navigator.share) { 
+  navigator.share({
+     title: 'WebShare API Demo',
+     url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+   }).then(() => {
+     console.log('Thanks for sharing!');
+   })
+   .catch(console.error);
+} else {
+  console.error('Share not available!')
 }
