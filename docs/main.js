@@ -1530,3 +1530,39 @@
 //     console.log(a)
 // }
 
+function cached(fn) {
+    const cache = Object.create({});
+
+    return function cachedFn(args) {
+        
+        if(cache[args]) {
+            console.log('found in cache')
+            return cache[args]
+        }
+        const result = fn(args)
+        cache[args] = result;
+
+        console.log("Cache: ", cache)
+        return result
+    }
+
+}
+
+
+function sum(a) {
+    let sum = 0;
+    for(let i=1; i<=a; i++)
+        sum += i;
+    return sum;
+}
+let start = new Date().getTime();
+console.log(cached(sum)(1000000000))
+let end = new Date().getTime();
+
+console.log('1st Execution time: ' + (end - start));
+
+start = new Date().getTime();
+console.log(cached(sum)(1000000000))
+end = new Date().getTime();
+
+console.log('2nd Execution time: ' + (end - start));
